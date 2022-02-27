@@ -34,5 +34,21 @@ namespace investiciju_portfolio.Utilities
             }
             return true;
         }
+
+        /*
+        public async void TestConnection()
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using var command = new MySqlCommand(String.Format("SELECT first_name FROM users WHERE username={0}", "'testname'"), connection);
+                using var reader = await command.ExecuteReaderAsync();
+                while (await reader.ReadAsync())
+                {
+                    var value = reader.GetValue(0);
+                    MessageBox.Show(value.ToString());
+                }
+            }
+        }
+        */
     }
 }
