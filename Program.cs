@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using investiciju_portfolio.Utilities;
 
 namespace investiciju_portfolio
 {
@@ -17,6 +18,9 @@ namespace investiciju_portfolio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //DatabaseConnection dbConnection = new DatabaseConnection();
+            //bool test = dbConnection.OpenConnection();
+            //dbConnection.TestConnection();
         }
     }
 }
