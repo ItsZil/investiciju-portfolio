@@ -40,5 +40,11 @@ namespace investiciju_portfolio
             exit = false;
             f2.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomeWindow f3 = new HomeWindow();
+            f3.ShowDialog();
+        }
     }
 }

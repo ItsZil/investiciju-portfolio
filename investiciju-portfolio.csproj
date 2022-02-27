@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeWindow.Designer.cs">
+      <DependentUpon>HomeWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HomeWindow.resx">
+      <DependentUpon>HomeWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-off-icon-19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsBuffer.bmp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsBuffer.bmp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsBuffer.bmp2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
