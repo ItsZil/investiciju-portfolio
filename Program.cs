@@ -21,6 +21,7 @@ namespace investiciju_portfolio
             //DatabaseConnection dbConnection = new DatabaseConnection();
             //bool test = dbConnection.OpenConnection();
             //dbConnection.TestConnection();
+            Application.Run(new LoginForm());
         }
     }
 }
