@@ -14,8 +14,8 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup>
-   <LangVersion>8.0</LangVersion>
-</PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -126,18 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\power-off-icon-19.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dsBuffer.bmp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dsBuffer.bmp1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dsBuffer.bmp2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
