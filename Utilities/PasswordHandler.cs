@@ -8,6 +8,21 @@ using System.Security.Cryptography;
 namespace investiciju_portfolio.Utilities
 {
     /// <summary>
+    /// A struct containing a password's hash and the salt necessary to decrypt it.
+    /// </summary>
+    public struct Password
+    {
+        public Password(string hash, string salt)
+        {
+            Hash = hash;
+            Salt = salt;
+        }
+
+        public string Hash { get; set; }
+        public string Salt { get; set; }
+    }
+
+    /// <summary>
     /// Static class containing methods to assist in hashing and unhashing passwords.
     /// </summary>
     static internal class PasswordHandler
@@ -34,7 +49,7 @@ namespace investiciju_portfolio.Utilities
         /// </summary>
         /// <param name="password">Plain text password string.</param>
         /// <returns>A string of the hashed password.</returns>
-        public static string CreateHash(string password)
+        public static Password CreateHash(string password)
         {
             RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
 
@@ -46,7 +61,7 @@ namespace investiciju_portfolio.Utilities
             Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(password, salt, ITERATIONS);
             string hashedPassword = hash.GetBytes(HASH_SIZE).ToString();
 
-            return hashedPassword;
+            return new Password(hashedPassword, salt.ToString());
         }
     }
 }
