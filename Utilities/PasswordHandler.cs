@@ -12,5 +12,16 @@ namespace investiciju_portfolio.Utilities
     /// </summary>
     static internal class PasswordHandler
     {
+        /// <summary>
+        /// Checks if a password meets the requirement of containing 1 number and 1 capital letter.
+        /// </summary>
+        /// <param name="password">The password string to check.</param>
+        /// <returns>true if meets requirements, false otherwise.</returns>
+        public static bool PasswordMeetsRequirements(string password)
+        {
+            return (password.Any(c => char.IsDigit(c))) &&
+                password.Any(c => char.IsUpper(c)) &&
+                password.Any(c => char.IsLower(c));
+        }
     }
 }
