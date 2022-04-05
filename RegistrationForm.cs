@@ -23,7 +23,6 @@ namespace investiciju_portfolio
             if (PasswordHandler.PasswordMeetsRequirements(passwordText))
             {
                 bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
-                MessageBox.Show(registrationState.ToString());
             }
             else
             {
