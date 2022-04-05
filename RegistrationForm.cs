@@ -14,7 +14,7 @@ namespace investiciju_portfolio
 
         private void RegistrationForm_RegisterButton_Click(object sender, EventArgs e)
         {
-            string usernameText = RegistrationForm_NameTextBox.Text;
+            string usernameText = RegistrationForm_UsernameTextBox.Text;
             string nameText = RegistrationForm_NameTextBox.Text;
             string surnameText = RegistrationForm_SurnameTextBox.Text;
             string passwordText = RegistrationForm_PasswordTextBox.Text;
@@ -23,6 +23,7 @@ namespace investiciju_portfolio
             if (PasswordHandler.PasswordMeetsRequirements(passwordText))
             {
                 bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
+                MessageBox.Show(registrationState.ToString());
             }
             else
             {

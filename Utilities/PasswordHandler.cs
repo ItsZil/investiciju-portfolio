@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace investiciju_portfolio.Utilities
 {
@@ -55,9 +56,9 @@ namespace investiciju_portfolio.Utilities
 
             // Generate password hash
             Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(password, salt, ITERATIONS);
-            string hashedPassword = hash.GetBytes(HASH_SIZE).ToString();
+            string hashedPassword = Encoding.UTF8.GetString(hash.GetBytes(HASH_SIZE));
 
-            return new Password(hashedPassword, salt.ToString());
+            return new Password(hashedPassword, Encoding.UTF8.GetString(salt));
         }
     }
 }
