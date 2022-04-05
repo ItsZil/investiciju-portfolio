@@ -77,6 +77,7 @@ namespace investiciju_portfolio
             this.RegistrationForm_RegisterButton.TabIndex = 10;
             this.RegistrationForm_RegisterButton.Text = "Register";
             this.RegistrationForm_RegisterButton.UseVisualStyleBackColor = false;
+            this.RegistrationForm_RegisterButton.Click += new System.EventHandler(this.RegistrationForm_RegisterButton_Click);
             // 
             // RegistrationForm_UsernameTextBox
             // 

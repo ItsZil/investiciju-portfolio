@@ -18,10 +18,10 @@ namespace investiciju_portfolio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
+
             //DatabaseConnection dbConnection = new DatabaseConnection();
             //bool test = dbConnection.OpenConnection();
             //dbConnection.TestConnection();
-            Application.Run(new LoginForm());
         }
     }
 }
