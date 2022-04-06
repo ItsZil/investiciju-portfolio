@@ -34,7 +34,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,11 +84,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.Logo_TextBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1382, 83);
+            this.panel1.Size = new System.Drawing.Size(1382, 77);
             this.panel1.TabIndex = 4;
             // 
             // textBox1
@@ -118,6 +121,17 @@
             this.textBox2.Text = "Password";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // Logo_TextBox
+            // 
+            this.Logo_TextBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo_TextBox.Image = global::investiciju_portfolio.Properties.Resources._77;
+            this.Logo_TextBox.Location = new System.Drawing.Point(0, 0);
+            this.Logo_TextBox.Name = "Logo_TextBox";
+            this.Logo_TextBox.Size = new System.Drawing.Size(77, 77);
+            this.Logo_TextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Logo_TextBox.TabIndex = 2;
+            this.Logo_TextBox.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,12 +143,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +164,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox Logo_TextBox;
     }
 }
 

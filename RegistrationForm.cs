@@ -26,5 +26,10 @@ namespace investiciju_portfolio
         {
             this.Close();
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
