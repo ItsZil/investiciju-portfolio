@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using investiciju_portfolio.Utilities;
+using investiciju_portfolio.Classes;
 
 namespace investiciju_portfolio
 {
@@ -17,14 +12,29 @@ namespace investiciju_portfolio
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void RegistrationForm_RegisterButton_Click(object sender, EventArgs e)
         {
+            string usernameText = RegistrationForm_UsernameTextBox.Text;
+            string nameText = RegistrationForm_NameTextBox.Text;
+            string surnameText = RegistrationForm_SurnameTextBox.Text;
+            string passwordText = RegistrationForm_PasswordTextBox.Text;
 
-        }
+            // IP-37 field verification: need to check if strings aren't empty, show errors
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            if (!Registration.IsUsernameUnique(usernameText))
+            { 
+                // error message
+                return;
+            }
+
+            if (!PasswordHandler.PasswordMeetsRequirements(passwordText))
+            {
+                // password does not contain at least 8 chars, or 1 capital letter, or 1 digit
+                return;
+            }
+
+            bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
+            // check if registration is successful, show message if not
         }
     }
 }

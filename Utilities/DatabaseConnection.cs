@@ -10,8 +10,16 @@ namespace investiciju_portfolio.Utilities
 {
     public class DatabaseConnection
     {
+        public MySqlConnection connection;
         private string connectionString = "server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio";
-        MySqlConnection connection;
+
+        /// <summary>
+        /// Initializes a new DatabaseConnection object and opens a connection.
+        /// </summary>
+        public DatabaseConnection()
+        {
+            OpenConnection();
+        }
 
         /// <summary>
         /// Opens a connection to the database server.
@@ -35,12 +43,28 @@ namespace investiciju_portfolio.Utilities
             return true;
         }
 
-        /*
+        /// <summary>
+        /// Executes the provided MySqlCommand.
+        /// </summary>
+        /// <param name="command">Command to execute.</param>
+        public async void ExecuteCommand(MySqlCommand command)
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (var cmd = command)
+                {
+                    cmd.Connection = connection;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        
         public async void TestConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
             {
-                using var command = new MySqlCommand(String.Format("SELECT first_name FROM users WHERE username={0}", "'testname'"), connection);
+                using var command = new MySqlCommand(String.Format("SELECT first_name FROM users WHERE username={0}", "'test'"), connection);
                 using var reader = await command.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
@@ -49,6 +73,6 @@ namespace investiciju_portfolio.Utilities
                 }
             }
         }
-        */
+        
     }
 }

@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Registration.cs" />
     <Compile Include="HomeWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\DatabaseConnection.cs" />
+    <Compile Include="Utilities\PasswordHandler.cs" />
     <EmbeddedResource Include="HomeWindow.resx">
       <DependentUpon>HomeWindow.cs</DependentUpon>
     </EmbeddedResource>
