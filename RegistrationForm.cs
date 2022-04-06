@@ -22,7 +22,7 @@ namespace investiciju_portfolio
             // IP-37 field verification: need to check if strings aren't empty, show errors
 
             if (!Registration.IsUsernameUnique(usernameText))
-            {
+            { 
                 // error message
                 return;
             }

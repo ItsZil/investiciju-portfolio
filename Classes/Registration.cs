@@ -53,18 +53,19 @@ namespace investiciju_portfolio.Classes
                 
                 using (dbConnection.connection)
                 {
-                    using (var command = new MySqlCommand(String.Format("SELECT 1 FROM users WHERE username={0}", username)))
+                    using (var command = new MySqlCommand(String.Format("SELECT 1 FROM users WHERE username='{0}'", username), dbConnection.connection))
                     {
                         using (var reader = command.ExecuteReader())
-                            if (reader.GetString(0) != null)
+                        {
+                            while (reader.Read())
                             {
-                                System.Windows.Forms.MessageBox.Show("not unique");
-                                return false;
+                                if (reader.GetString(0) != null)
+                                    return false;
                             }
+                        }
                     }
                 }
                 return true;
-                System.Windows.Forms.MessageBox.Show("unique");
             }
             catch (Exception ex)
             {
