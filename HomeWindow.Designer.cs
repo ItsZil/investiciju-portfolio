@@ -30,12 +30,12 @@ namespace investiciju_portfolio
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
+            this.HomeWindowForm_TurnOffButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@ namespace investiciju_portfolio
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.Logo_TextBox);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.HomeWindowForm_TurnOffButton);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -54,19 +54,6 @@ namespace investiciju_portfolio
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 77);
             this.panel1.TabIndex = 2;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1250, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(132, 77);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "OFF";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -127,6 +114,20 @@ namespace investiciju_portfolio
             this.Logo_TextBox.TabIndex = 7;
             this.Logo_TextBox.TabStop = false;
             // 
+            // HomeWindowForm_TurnOffButton
+            // 
+            this.HomeWindowForm_TurnOffButton.FlatAppearance.BorderSize = 0;
+            this.HomeWindowForm_TurnOffButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeWindowForm_TurnOffButton.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeWindowForm_TurnOffButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.HomeWindowForm_TurnOffButton.Image = global::investiciju_portfolio.Properties.Resources.off_button20px;
+            this.HomeWindowForm_TurnOffButton.Location = new System.Drawing.Point(1342, 0);
+            this.HomeWindowForm_TurnOffButton.Name = "HomeWindowForm_TurnOffButton";
+            this.HomeWindowForm_TurnOffButton.Size = new System.Drawing.Size(40, 40);
+            this.HomeWindowForm_TurnOffButton.TabIndex = 6;
+            this.HomeWindowForm_TurnOffButton.UseVisualStyleBackColor = true;
+            this.HomeWindowForm_TurnOffButton.Click += new System.EventHandler(this.HomeWindowForm_TurnOffButton_Click);
+            // 
             // HomeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
@@ -153,7 +154,7 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button HomeWindowForm_TurnOffButton;
         private System.Windows.Forms.PictureBox Logo_TextBox;
     }
 }

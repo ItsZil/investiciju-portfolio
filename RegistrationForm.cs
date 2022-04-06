@@ -31,5 +31,10 @@ namespace investiciju_portfolio
         {
 
         }
+
+        private void RegistrationForm_TurnOffButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LoginForm_TurnOffButton = new System.Windows.Forms.Button();
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
@@ -84,6 +85,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.LoginForm_TurnOffButton);
             this.panel1.Controls.Add(this.Logo_TextBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,6 +122,18 @@
             this.textBox2.TabIndex = 13;
             this.textBox2.Text = "Password";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoginForm_TurnOffButton
+            // 
+            this.LoginForm_TurnOffButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginForm_TurnOffButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.LoginForm_TurnOffButton.Image = global::investiciju_portfolio.Properties.Resources.off_button20px;
+            this.LoginForm_TurnOffButton.Location = new System.Drawing.Point(1342, 0);
+            this.LoginForm_TurnOffButton.Name = "LoginForm_TurnOffButton";
+            this.LoginForm_TurnOffButton.Size = new System.Drawing.Size(40, 40);
+            this.LoginForm_TurnOffButton.TabIndex = 3;
+            this.LoginForm_TurnOffButton.UseVisualStyleBackColor = true;
+            this.LoginForm_TurnOffButton.Click += new System.EventHandler(this.LoginForm_TurnOffButton_Click);
             // 
             // Logo_TextBox
             // 
@@ -165,6 +179,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox Logo_TextBox;
+        private System.Windows.Forms.Button LoginForm_TurnOffButton;
     }
 }
 
