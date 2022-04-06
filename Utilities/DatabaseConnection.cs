@@ -10,8 +10,8 @@ namespace investiciju_portfolio.Utilities
 {
     public class DatabaseConnection
     {
+        public MySqlConnection connection;
         private string connectionString = "server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio";
-        MySqlConnection connection;
 
         /// <summary>
         /// Initializes a new DatabaseConnection object and opens a connection.

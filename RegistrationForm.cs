@@ -20,14 +20,21 @@ namespace investiciju_portfolio
             string passwordText = RegistrationForm_PasswordTextBox.Text;
 
             // IP-37 field verification: need to check if strings aren't empty, show errors
-            if (PasswordHandler.PasswordMeetsRequirements(passwordText))
+
+            if (!Registration.IsUsernameUnique(usernameText))
             {
-                bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
+                // error message
+                return;
             }
-            else
+
+            if (!PasswordHandler.PasswordMeetsRequirements(passwordText))
             {
                 // password does not contain at least 8 chars, or 1 capital letter, or 1 digit
+                return;
             }
+
+            bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
+            // check if registration is successful, show message if not
         }
     }
 }
