@@ -49,5 +49,15 @@ namespace investiciju_portfolio
         {
             Application.Exit();
         }
+
+        private void placeholderTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_UsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

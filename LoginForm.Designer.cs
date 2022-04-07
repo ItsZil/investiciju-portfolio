@@ -36,6 +36,7 @@
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.LoginForm_UsernameTextBox = new System.Windows.Forms.TextBox();
             this.LoginForm_PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.WatermarkTextBox1 = new investiciju_portfolio.Classes.WatermarkTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +131,7 @@
             this.LoginForm_UsernameTextBox.TabIndex = 12;
             this.LoginForm_UsernameTextBox.Text = "Username";
             this.LoginForm_UsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LoginForm_UsernameTextBox.TextChanged += new System.EventHandler(this.LoginForm_UsernameTextBox_TextChanged);
             // 
             // LoginForm_PasswordTextBox
             // 
@@ -146,12 +148,26 @@
             this.LoginForm_PasswordTextBox.Text = "Password";
             this.LoginForm_PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // WatermarkTextBox1
+            // 
+            this.WatermarkTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.WatermarkTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WatermarkTextBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WatermarkTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.WatermarkTextBox1.Hint = "Username";
+            this.WatermarkTextBox1.Location = new System.Drawing.Point(507, 139);
+            this.WatermarkTextBox1.Name = "WatermarkTextBox1";
+            this.WatermarkTextBox1.Size = new System.Drawing.Size(385, 25);
+            this.WatermarkTextBox1.TabIndex = 18;
+            this.WatermarkTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(1382, 593);
+            this.Controls.Add(this.WatermarkTextBox1);
             this.Controls.Add(this.LoginForm_PasswordTextBox);
             this.Controls.Add(this.LoginForm_UsernameTextBox);
             this.Controls.Add(this.panel1);
@@ -180,6 +196,7 @@
         private System.Windows.Forms.TextBox LoginForm_PasswordTextBox;
         private System.Windows.Forms.PictureBox Logo_TextBox;
         private System.Windows.Forms.Button LoginForm_TurnOffButton;
+        private Classes.WatermarkTextBox WatermarkTextBox1;
     }
 }
 
