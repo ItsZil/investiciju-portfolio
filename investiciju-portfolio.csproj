@@ -85,6 +85,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OverviewTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OverviewTab.Designer.cs">
+      <DependentUpon>OverviewTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverviewTab.resx">
+      <DependentUpon>OverviewTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
@@ -128,10 +137,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\77.jpg" />
+    <None Include="Resources\off-button20px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\off-button20px.png" />
+    <None Include="Resources\logo77px.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
