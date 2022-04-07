@@ -115,16 +115,18 @@ namespace investiciju_portfolio
             // 
             // overviewTab1
             // 
+            this.overviewTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
             this.overviewTab1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.overviewTab1.Location = new System.Drawing.Point(0, 0);
-            this.overviewTab1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.overviewTab1.Margin = new System.Windows.Forms.Padding(5);
             this.overviewTab1.Name = "overviewTab1";
             this.overviewTab1.Size = new System.Drawing.Size(1382, 576);
             this.overviewTab1.TabIndex = 0;
+            this.overviewTab1.Load += new System.EventHandler(this.overviewTab1_Load);
             // 
             // HomeWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(1382, 653);
