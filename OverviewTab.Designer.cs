@@ -29,32 +29,52 @@ namespace investiciju_portfolio
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.StockPricePanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StockPricePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // StockPricePanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.StockPricePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.StockPricePanel.Controls.Add(this.dataGridView1);
+            this.StockPricePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.StockPricePanel.Location = new System.Drawing.Point(0, 0);
+            this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StockPricePanel.Name = "StockPricePanel";
+            this.StockPricePanel.Size = new System.Drawing.Size(197, 576);
+            this.StockPricePanel.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(197, 576);
+            this.dataGridView1.TabIndex = 0;
             // 
             // OverviewTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            this.Controls.Add(this.StockPricePanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OverviewTab";
             this.Size = new System.Drawing.Size(1382, 576);
+            this.StockPricePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel StockPricePanel;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

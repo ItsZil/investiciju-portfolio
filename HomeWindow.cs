@@ -34,7 +34,7 @@ namespace investiciju_portfolio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            overviewTab1.BringToFront();
+            //overviewTab1.BringToFront();
         }
 
         private void HomeWindow_Load(object sender, EventArgs e)

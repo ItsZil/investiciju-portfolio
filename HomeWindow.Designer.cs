@@ -35,6 +35,7 @@ namespace investiciju_portfolio
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.overviewTab1 = new investiciju_portfolio.OverviewTab();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -105,11 +106,21 @@ namespace investiciju_portfolio
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.overviewTab1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 77);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1382, 576);
             this.panel2.TabIndex = 3;
+            // 
+            // overviewTab1
+            // 
+            this.overviewTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.overviewTab1.Location = new System.Drawing.Point(0, 0);
+            this.overviewTab1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.overviewTab1.Name = "overviewTab1";
+            this.overviewTab1.Size = new System.Drawing.Size(1382, 576);
+            this.overviewTab1.TabIndex = 0;
             // 
             // HomeWindow
             // 
@@ -141,5 +152,6 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Button HomeWindowForm_TurnOffButton;
         private System.Windows.Forms.PictureBox Logo_TextBox;
         private System.Windows.Forms.Panel panel2;
+        private OverviewTab overviewTab1;
     }
 }
