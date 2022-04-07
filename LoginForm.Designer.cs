@@ -138,7 +138,7 @@
             // Logo_TextBox
             // 
             this.Logo_TextBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logo_TextBox.Image = global::investiciju_portfolio.Properties.Resources._77;
+            this.Logo_TextBox.Image = global::investiciju_portfolio.Properties.Resources.logo77px;
             this.Logo_TextBox.Location = new System.Drawing.Point(0, 0);
             this.Logo_TextBox.Name = "Logo_TextBox";
             this.Logo_TextBox.Size = new System.Drawing.Size(77, 77);
