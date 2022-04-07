@@ -46,5 +46,10 @@ namespace investiciju_portfolio
             HomeWindow f3 = new HomeWindow();
             f3.ShowDialog();
         }
+
+        private void LoginForm_TurnOffButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

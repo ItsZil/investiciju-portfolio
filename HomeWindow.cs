@@ -27,9 +27,9 @@ namespace investiciju_portfolio
 
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void HomeWindowForm_TurnOffButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

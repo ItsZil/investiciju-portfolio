@@ -30,6 +30,7 @@ namespace investiciju_portfolio
         private void InitializeComponent()
         {
             this.RegistrationPanel = new System.Windows.Forms.Panel();
+            this.RegistrationForm_TurnOffButton = new System.Windows.Forms.Button();
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RegistrationForm_RegisterButton = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@ namespace investiciju_portfolio
             // RegistrationPanel
             // 
             this.RegistrationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.RegistrationPanel.Controls.Add(this.RegistrationForm_TurnOffButton);
             this.RegistrationPanel.Controls.Add(this.Logo_TextBox);
             this.RegistrationPanel.Controls.Add(this.label1);
             this.RegistrationPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -51,15 +53,27 @@ namespace investiciju_portfolio
             this.RegistrationPanel.Location = new System.Drawing.Point(0, 0);
             this.RegistrationPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegistrationPanel.Name = "RegistrationPanel";
-            this.RegistrationPanel.Size = new System.Drawing.Size(1283, 77);
+            this.RegistrationPanel.Size = new System.Drawing.Size(1382, 77);
             this.RegistrationPanel.TabIndex = 0;
+            // 
+            // RegistrationForm_TurnOffButton
+            // 
+            this.RegistrationForm_TurnOffButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistrationForm_TurnOffButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.RegistrationForm_TurnOffButton.Image = global::investiciju_portfolio.Properties.Resources.off_button20px;
+            this.RegistrationForm_TurnOffButton.Location = new System.Drawing.Point(1342, 0);
+            this.RegistrationForm_TurnOffButton.Name = "RegistrationForm_TurnOffButton";
+            this.RegistrationForm_TurnOffButton.Size = new System.Drawing.Size(40, 40);
+            this.RegistrationForm_TurnOffButton.TabIndex = 4;
+            this.RegistrationForm_TurnOffButton.UseVisualStyleBackColor = true;
+            this.RegistrationForm_TurnOffButton.Click += new System.EventHandler(this.RegistrationForm_TurnOffButton_Click);
             // 
             // Logo_TextBox
             // 
             this.Logo_TextBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.Logo_TextBox.Image = global::investiciju_portfolio.Properties.Resources._77;
             this.Logo_TextBox.Location = new System.Drawing.Point(0, 0);
-            this.Logo_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logo_TextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Logo_TextBox.Name = "Logo_TextBox";
             this.Logo_TextBox.Size = new System.Drawing.Size(77, 77);
             this.Logo_TextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -160,7 +174,7 @@ namespace investiciju_portfolio
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(1283, 553);
+            this.ClientSize = new System.Drawing.Size(1382, 593);
             this.Controls.Add(this.RegistrationForm_NameTextBox);
             this.Controls.Add(this.RegistrationForm_SurnameTextBox);
             this.Controls.Add(this.RegistrationForm_PasswordTextBox);
@@ -168,7 +182,7 @@ namespace investiciju_portfolio
             this.Controls.Add(this.RegistrationForm_RegisterButton);
             this.Controls.Add(this.RegistrationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
@@ -191,5 +205,6 @@ namespace investiciju_portfolio
         private System.Windows.Forms.TextBox RegistrationForm_SurnameTextBox;
         private System.Windows.Forms.TextBox RegistrationForm_NameTextBox;
         private System.Windows.Forms.PictureBox Logo_TextBox;
+        private System.Windows.Forms.Button RegistrationForm_TurnOffButton;
     }
 }
