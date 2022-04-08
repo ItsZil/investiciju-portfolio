@@ -27,9 +27,24 @@ namespace investiciju_portfolio
 
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void HomeWindowForm_TurnOffButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            overviewTab1.BringToFront();
+        }
+
+        private void HomeWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void overviewTab1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

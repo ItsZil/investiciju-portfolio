@@ -36,5 +36,15 @@ namespace investiciju_portfolio
             bool registrationState = Registration.RegisterUser(usernameText, nameText, surnameText, passwordText);
             // check if registration is successful, show message if not
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistrationForm_TurnOffButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
