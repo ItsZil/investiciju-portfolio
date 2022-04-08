@@ -23,23 +23,13 @@ namespace investiciju_portfolio
         {   
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void LoginForm_RegisterButton_Click(object sender, EventArgs e)
         {
             RegistrationForm f2 = new RegistrationForm();
             f2.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoginForm_LoginButton_Click(object sender, EventArgs e)
         {
             HomeWindow f3 = new HomeWindow();
             f3.ShowDialog();
@@ -48,6 +38,16 @@ namespace investiciju_portfolio
         private void LoginForm_TurnOffButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void placeholderTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_UsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
