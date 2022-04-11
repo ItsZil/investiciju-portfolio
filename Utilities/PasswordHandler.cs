@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Cryptography;
+using Microsoft.AspNet.Identity;
 
 namespace investiciju_portfolio.Utilities
 {
@@ -9,14 +10,13 @@ namespace investiciju_portfolio.Utilities
     /// </summary>
     public struct Password
     {
-        public Password(string hash, string salt)
+        public Password(string hash)
         {
             Hash = hash;
-            Salt = salt;
         }
 
         public string Hash { get; set; }
-        public string Salt { get; set; }
+
     }
 
     /// <summary>
@@ -24,9 +24,6 @@ namespace investiciju_portfolio.Utilities
     /// </summary>
     static internal class PasswordHandler
     {
-        public const int SALT_SIZE = 24; // Size in bytes
-        public const int HASH_SIZE = 24; // Size in bytes
-        public const int ITERATIONS = 100000; // Number of PBKDF2 iterations
 
         /// <summary>
         /// Checks if a password meets the requirement of containing 1 number and 1 capital letter.
@@ -48,17 +45,11 @@ namespace investiciju_portfolio.Utilities
         /// <returns>A string of the hashed password.</returns>
         public static Password CreateHash(string password)
         {
-            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
 
-            // Generate unique random salt
-            byte[] salt = new byte[SALT_SIZE];
-            provider.GetBytes(salt);
+            var passwordHasher = new PasswordHasher();
+            var hash = passwordHasher.HashPassword(password);
 
-            // Generate password hash
-            Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(password, salt, ITERATIONS);
-            string hashedPassword = Convert.ToBase64String(hash.GetBytes(HASH_SIZE));
-
-            return new Password(hashedPassword, Convert.ToBase64String(salt));
+            return new Password(hash);
         }
     }
 }

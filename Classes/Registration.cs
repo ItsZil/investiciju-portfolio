@@ -1,6 +1,8 @@
 ﻿using System;
 using MySqlConnector;
 using investiciju_portfolio.Utilities;
+using System.Security.Cryptography;
+using Microsoft.AspNet.Identity;
 
 namespace investiciju_portfolio.Classes
 {
@@ -23,15 +25,13 @@ namespace investiciju_portfolio.Classes
             {
                 Password userPassword = PasswordHandler.CreateHash(password);
                 DatabaseConnection dbConnection = new DatabaseConnection();
-
-                MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO users (username, password, salt, first_name, surname) VALUES (@username, @password, @salt, @first_name, @surname)"));
+                MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO users (username, password, first_name, surname) VALUES (@username, @password, @first_name, @surname)"));
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", userPassword.Hash);
-                command.Parameters.AddWithValue("@salt", userPassword.Salt);
                 command.Parameters.AddWithValue("@first_name", name);
                 command.Parameters.AddWithValue("@surname", surname);
-
                 dbConnection.ExecuteCommand(command);
+
                 return true;
             }
             catch (Exception ex)

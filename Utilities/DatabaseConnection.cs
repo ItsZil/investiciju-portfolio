@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
-
 namespace investiciju_portfolio.Utilities
 {
     public class DatabaseConnection
