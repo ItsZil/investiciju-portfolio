@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using investiciju_portfolio.Utilities;
+using investiciju_portfolio.Classes;
 
 namespace investiciju_portfolio
 {
@@ -31,8 +33,15 @@ namespace investiciju_portfolio
 
         private void LoginForm_LoginButton_Click(object sender, EventArgs e)
         {
-            HomeWindow f3 = new HomeWindow();
-            f3.ShowDialog();
+            string usernameText = LoginForm_UsernameTextBox.Text;
+            string passwordText = LoginForm_PasswordTextBox.Text;
+            bool loginState = Login.CheckLogin(usernameText, passwordText);
+            if (loginState)
+            {
+                HomeWindow f3 = new HomeWindow();
+                f3.ShowDialog();
+            }
+               
         }
 
         private void LoginForm_TurnOffButton_Click(object sender, EventArgs e)
