@@ -32,11 +32,11 @@ namespace investiciju_portfolio.Classes
                     if (isVerified)
                         return true;
                     else
-                        System.Windows.Forms.MessageBox.Show("Įvestas neteisingas slaptažodis");
+                        System.Windows.Forms.MessageBox.Show("Invalid username and/or incorrect password.");
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Nėra tokio naudotojo");
+                    System.Windows.Forms.MessageBox.Show("Invalid username and/or incorrect password.");
                 }
                 con.Close();
 
