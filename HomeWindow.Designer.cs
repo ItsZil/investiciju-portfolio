@@ -32,9 +32,10 @@ namespace investiciju_portfolio
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.HomeWindowForm_TurnOffButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.HomeWindow_SettingsButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.settingsTab1 = new investiciju_portfolio.SettingsTab();
             this.overviewTab1 = new investiciju_portfolio.OverviewTab();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
@@ -46,7 +47,7 @@ namespace investiciju_portfolio
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.Logo_TextBox);
             this.panel1.Controls.Add(this.HomeWindowForm_TurnOffButton);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.HomeWindow_SettingsButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,17 +80,18 @@ namespace investiciju_portfolio
             this.HomeWindowForm_TurnOffButton.UseVisualStyleBackColor = true;
             this.HomeWindowForm_TurnOffButton.Click += new System.EventHandler(this.HomeWindowForm_TurnOffButton_Click);
             // 
-            // button2
+            // HomeWindow_SettingsButton
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(211, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 77);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Charts";
-            this.button2.UseVisualStyleBackColor = true;
+            this.HomeWindow_SettingsButton.FlatAppearance.BorderSize = 0;
+            this.HomeWindow_SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeWindow_SettingsButton.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeWindow_SettingsButton.Location = new System.Drawing.Point(211, 0);
+            this.HomeWindow_SettingsButton.Name = "HomeWindow_SettingsButton";
+            this.HomeWindow_SettingsButton.Size = new System.Drawing.Size(132, 77);
+            this.HomeWindow_SettingsButton.TabIndex = 3;
+            this.HomeWindow_SettingsButton.Text = "Settings";
+            this.HomeWindow_SettingsButton.UseVisualStyleBackColor = true;
+            this.HomeWindow_SettingsButton.Click += new System.EventHandler(this.HomeWindow_SettingsButton_Click);
             // 
             // button1
             // 
@@ -107,11 +109,22 @@ namespace investiciju_portfolio
             // panel2
             // 
             this.panel2.Controls.Add(this.overviewTab1);
+            this.panel2.Controls.Add(this.settingsTab1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 77);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1382, 576);
             this.panel2.TabIndex = 3;
+            // 
+            // settingsTab1
+            // 
+            this.settingsTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            this.settingsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingsTab1.Location = new System.Drawing.Point(0, 0);
+            this.settingsTab1.Margin = new System.Windows.Forms.Padding(2);
+            this.settingsTab1.Name = "settingsTab1";
+            this.settingsTab1.Size = new System.Drawing.Size(1382, 576);
+            this.settingsTab1.TabIndex = 1;
             // 
             // overviewTab1
             // 
@@ -126,7 +139,7 @@ namespace investiciju_portfolio
             // 
             // HomeWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(1382, 653);
@@ -150,10 +163,11 @@ namespace investiciju_portfolio
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button HomeWindow_SettingsButton;
         private System.Windows.Forms.Button HomeWindowForm_TurnOffButton;
         private System.Windows.Forms.PictureBox Logo_TextBox;
         private System.Windows.Forms.Panel panel2;
         private OverviewTab overviewTab1;
+        private SettingsTab settingsTab1;
     }
 }

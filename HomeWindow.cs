@@ -46,5 +46,10 @@ namespace investiciju_portfolio
         {
 
         }
+
+        private void HomeWindow_SettingsButton_Click(object sender, EventArgs e)
+        {
+            settingsTab1.BringToFront();
+        }
     }
 }

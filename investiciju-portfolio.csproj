@@ -92,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\WatermarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -122,6 +125,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsTab.Designer.cs">
+      <DependentUpon>SettingsTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\DatabaseConnection.cs" />
     <Compile Include="Utilities\PasswordHandler.cs" />
     <EmbeddedResource Include="HomeWindow.resx">
@@ -146,6 +155,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SettingsTab.resx">
+      <DependentUpon>SettingsTab.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
