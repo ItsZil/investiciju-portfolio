@@ -30,6 +30,9 @@ namespace investiciju_portfolio
         private void InitializeComponent()
         {
             this.StockPricePanel = new System.Windows.Forms.Panel();
+            this.StockListView = new System.Windows.Forms.ListView();
+            this.StockName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StockPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OverviewTab_EquityValueLabel = new System.Windows.Forms.Label();
             this.OverviewTab_EquityLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,9 +44,6 @@ namespace investiciju_portfolio
             this.panel4 = new System.Windows.Forms.Panel();
             this.OverviewTab_StockCountLabel = new System.Windows.Forms.Label();
             this.OverviewTab_StockCountValueLabel = new System.Windows.Forms.Label();
-            this.StockListView = new System.Windows.Forms.ListView();
-            this.StockName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.StockPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StockPricePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,145 +57,10 @@ namespace investiciju_portfolio
             this.StockPricePanel.Controls.Add(this.StockListView);
             this.StockPricePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.StockPricePanel.Location = new System.Drawing.Point(0, 0);
-            this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2);
             this.StockPricePanel.Name = "StockPricePanel";
             this.StockPricePanel.Size = new System.Drawing.Size(310, 576);
             this.StockPricePanel.TabIndex = 0;
-            // 
-            // OverviewTab_EquityValueLabel
-            // 
-            this.OverviewTab_EquityValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OverviewTab_EquityValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_EquityValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_EquityValueLabel.ForeColor = System.Drawing.Color.White;
-            this.OverviewTab_EquityValueLabel.Location = new System.Drawing.Point(0, 37);
-            this.OverviewTab_EquityValueLabel.Name = "OverviewTab_EquityValueLabel";
-            this.OverviewTab_EquityValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.OverviewTab_EquityValueLabel.Size = new System.Drawing.Size(350, 43);
-            this.OverviewTab_EquityValueLabel.TabIndex = 1;
-            this.OverviewTab_EquityValueLabel.Text = "€ 1000";
-            this.OverviewTab_EquityValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // OverviewTab_EquityLabel
-            // 
-            this.OverviewTab_EquityLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.OverviewTab_EquityLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_EquityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_EquityLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.OverviewTab_EquityLabel.Location = new System.Drawing.Point(0, 0);
-            this.OverviewTab_EquityLabel.Name = "OverviewTab_EquityLabel";
-            this.OverviewTab_EquityLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.OverviewTab_EquityLabel.Size = new System.Drawing.Size(350, 37);
-            this.OverviewTab_EquityLabel.TabIndex = 2;
-            this.OverviewTab_EquityLabel.Text = "Equity Value";
-            this.OverviewTab_EquityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            this.panel1.Controls.Add(this.OverviewTab_EquityLabel);
-            this.panel1.Controls.Add(this.OverviewTab_EquityValueLabel);
-            this.panel1.Location = new System.Drawing.Point(315, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 80);
-            this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.OverviewTab_OverviewLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(310, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1072, 52);
-            this.panel2.TabIndex = 4;
-            // 
-            // OverviewTab_OverviewLabel
-            // 
-            this.OverviewTab_OverviewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OverviewTab_OverviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_OverviewLabel.ForeColor = System.Drawing.Color.White;
-            this.OverviewTab_OverviewLabel.Location = new System.Drawing.Point(0, 0);
-            this.OverviewTab_OverviewLabel.Name = "OverviewTab_OverviewLabel";
-            this.OverviewTab_OverviewLabel.Size = new System.Drawing.Size(1072, 52);
-            this.OverviewTab_OverviewLabel.TabIndex = 0;
-            this.OverviewTab_OverviewLabel.Text = "Overview";
-            this.OverviewTab_OverviewLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            this.panel3.Controls.Add(this.OverviewTab_PNLLabel);
-            this.panel3.Controls.Add(this.OverviewTab_PNLValueLabel);
-            this.panel3.Location = new System.Drawing.Point(671, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(350, 80);
-            this.panel3.TabIndex = 4;
-            // 
-            // OverviewTab_PNLLabel
-            // 
-            this.OverviewTab_PNLLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.OverviewTab_PNLLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_PNLLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_PNLLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.OverviewTab_PNLLabel.Location = new System.Drawing.Point(0, 0);
-            this.OverviewTab_PNLLabel.Name = "OverviewTab_PNLLabel";
-            this.OverviewTab_PNLLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.OverviewTab_PNLLabel.Size = new System.Drawing.Size(350, 37);
-            this.OverviewTab_PNLLabel.TabIndex = 2;
-            this.OverviewTab_PNLLabel.Text = "Yesterdays PNL";
-            this.OverviewTab_PNLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // OverviewTab_PNLValueLabel
-            // 
-            this.OverviewTab_PNLValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OverviewTab_PNLValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_PNLValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_PNLValueLabel.ForeColor = System.Drawing.Color.White;
-            this.OverviewTab_PNLValueLabel.Location = new System.Drawing.Point(0, 37);
-            this.OverviewTab_PNLValueLabel.Name = "OverviewTab_PNLValueLabel";
-            this.OverviewTab_PNLValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.OverviewTab_PNLValueLabel.Size = new System.Drawing.Size(350, 43);
-            this.OverviewTab_PNLValueLabel.TabIndex = 1;
-            this.OverviewTab_PNLValueLabel.Text = "+-5%";
-            this.OverviewTab_PNLValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            this.panel4.Controls.Add(this.OverviewTab_StockCountLabel);
-            this.panel4.Controls.Add(this.OverviewTab_StockCountValueLabel);
-            this.panel4.Location = new System.Drawing.Point(1027, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(350, 80);
-            this.panel4.TabIndex = 4;
-            // 
-            // OverviewTab_StockCountLabel
-            // 
-            this.OverviewTab_StockCountLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.OverviewTab_StockCountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_StockCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_StockCountLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.OverviewTab_StockCountLabel.Location = new System.Drawing.Point(0, 0);
-            this.OverviewTab_StockCountLabel.Name = "OverviewTab_StockCountLabel";
-            this.OverviewTab_StockCountLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.OverviewTab_StockCountLabel.Size = new System.Drawing.Size(350, 37);
-            this.OverviewTab_StockCountLabel.TabIndex = 2;
-            this.OverviewTab_StockCountLabel.Text = "Total Stock Count";
-            this.OverviewTab_StockCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // OverviewTab_StockCountValueLabel
-            // 
-            this.OverviewTab_StockCountValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OverviewTab_StockCountValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_StockCountValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_StockCountValueLabel.ForeColor = System.Drawing.Color.White;
-            this.OverviewTab_StockCountValueLabel.Location = new System.Drawing.Point(0, 37);
-            this.OverviewTab_StockCountValueLabel.Name = "OverviewTab_StockCountValueLabel";
-            this.OverviewTab_StockCountValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.OverviewTab_StockCountValueLabel.Size = new System.Drawing.Size(350, 43);
-            this.OverviewTab_StockCountValueLabel.TabIndex = 1;
-            this.OverviewTab_StockCountValueLabel.Text = "5";
-            this.OverviewTab_StockCountValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StockListView
             // 
@@ -228,6 +93,141 @@ namespace investiciju_portfolio
             this.StockPrice.Text = "Last";
             this.StockPrice.Width = 155;
             // 
+            // OverviewTab_EquityValueLabel
+            // 
+            this.OverviewTab_EquityValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OverviewTab_EquityValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_EquityValueLabel.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_EquityValueLabel.ForeColor = System.Drawing.Color.White;
+            this.OverviewTab_EquityValueLabel.Location = new System.Drawing.Point(0, 37);
+            this.OverviewTab_EquityValueLabel.Name = "OverviewTab_EquityValueLabel";
+            this.OverviewTab_EquityValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.OverviewTab_EquityValueLabel.Size = new System.Drawing.Size(350, 43);
+            this.OverviewTab_EquityValueLabel.TabIndex = 1;
+            this.OverviewTab_EquityValueLabel.Text = "€ 1000";
+            this.OverviewTab_EquityValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OverviewTab_EquityLabel
+            // 
+            this.OverviewTab_EquityLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OverviewTab_EquityLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_EquityLabel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_EquityLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.OverviewTab_EquityLabel.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_EquityLabel.Name = "OverviewTab_EquityLabel";
+            this.OverviewTab_EquityLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.OverviewTab_EquityLabel.Size = new System.Drawing.Size(350, 37);
+            this.OverviewTab_EquityLabel.TabIndex = 2;
+            this.OverviewTab_EquityLabel.Text = "Equity Value";
+            this.OverviewTab_EquityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.OverviewTab_EquityLabel);
+            this.panel1.Controls.Add(this.OverviewTab_EquityValueLabel);
+            this.panel1.Location = new System.Drawing.Point(315, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(350, 80);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.OverviewTab_OverviewLabel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(310, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1072, 52);
+            this.panel2.TabIndex = 4;
+            // 
+            // OverviewTab_OverviewLabel
+            // 
+            this.OverviewTab_OverviewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OverviewTab_OverviewLabel.Font = new System.Drawing.Font("Verdana", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_OverviewLabel.ForeColor = System.Drawing.Color.White;
+            this.OverviewTab_OverviewLabel.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_OverviewLabel.Name = "OverviewTab_OverviewLabel";
+            this.OverviewTab_OverviewLabel.Size = new System.Drawing.Size(1072, 52);
+            this.OverviewTab_OverviewLabel.TabIndex = 0;
+            this.OverviewTab_OverviewLabel.Text = "Overview";
+            this.OverviewTab_OverviewLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.panel3.Controls.Add(this.OverviewTab_PNLLabel);
+            this.panel3.Controls.Add(this.OverviewTab_PNLValueLabel);
+            this.panel3.Location = new System.Drawing.Point(671, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(350, 80);
+            this.panel3.TabIndex = 4;
+            // 
+            // OverviewTab_PNLLabel
+            // 
+            this.OverviewTab_PNLLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OverviewTab_PNLLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_PNLLabel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_PNLLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.OverviewTab_PNLLabel.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_PNLLabel.Name = "OverviewTab_PNLLabel";
+            this.OverviewTab_PNLLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.OverviewTab_PNLLabel.Size = new System.Drawing.Size(350, 37);
+            this.OverviewTab_PNLLabel.TabIndex = 2;
+            this.OverviewTab_PNLLabel.Text = "Yesterdays PNL";
+            this.OverviewTab_PNLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OverviewTab_PNLValueLabel
+            // 
+            this.OverviewTab_PNLValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OverviewTab_PNLValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_PNLValueLabel.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_PNLValueLabel.ForeColor = System.Drawing.Color.White;
+            this.OverviewTab_PNLValueLabel.Location = new System.Drawing.Point(0, 37);
+            this.OverviewTab_PNLValueLabel.Name = "OverviewTab_PNLValueLabel";
+            this.OverviewTab_PNLValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.OverviewTab_PNLValueLabel.Size = new System.Drawing.Size(350, 43);
+            this.OverviewTab_PNLValueLabel.TabIndex = 1;
+            this.OverviewTab_PNLValueLabel.Text = "+-5%";
+            this.OverviewTab_PNLValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.OverviewTab_StockCountLabel);
+            this.panel4.Controls.Add(this.OverviewTab_StockCountValueLabel);
+            this.panel4.Location = new System.Drawing.Point(1027, 58);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(350, 80);
+            this.panel4.TabIndex = 4;
+            // 
+            // OverviewTab_StockCountLabel
+            // 
+            this.OverviewTab_StockCountLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OverviewTab_StockCountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_StockCountLabel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_StockCountLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.OverviewTab_StockCountLabel.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_StockCountLabel.Name = "OverviewTab_StockCountLabel";
+            this.OverviewTab_StockCountLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.OverviewTab_StockCountLabel.Size = new System.Drawing.Size(350, 37);
+            this.OverviewTab_StockCountLabel.TabIndex = 2;
+            this.OverviewTab_StockCountLabel.Text = "Total Stock Count";
+            this.OverviewTab_StockCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OverviewTab_StockCountValueLabel
+            // 
+            this.OverviewTab_StockCountValueLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OverviewTab_StockCountValueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_StockCountValueLabel.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_StockCountValueLabel.ForeColor = System.Drawing.Color.White;
+            this.OverviewTab_StockCountValueLabel.Location = new System.Drawing.Point(0, 37);
+            this.OverviewTab_StockCountValueLabel.Name = "OverviewTab_StockCountValueLabel";
+            this.OverviewTab_StockCountValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.OverviewTab_StockCountValueLabel.Size = new System.Drawing.Size(350, 43);
+            this.OverviewTab_StockCountValueLabel.TabIndex = 1;
+            this.OverviewTab_StockCountValueLabel.Text = "5";
+            this.OverviewTab_StockCountValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // OverviewTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -237,9 +237,10 @@ namespace investiciju_portfolio
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StockPricePanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OverviewTab";
             this.Size = new System.Drawing.Size(1382, 576);
+            this.Load += new System.EventHandler(this.OverviewTab_Load);
             this.StockPricePanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
