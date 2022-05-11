@@ -69,5 +69,17 @@ namespace investiciju_portfolio.Properties {
                 this["id"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string first_name {
+            get {
+                return ((string)(this["first_name"]));
+            }
+            set {
+                this["first_name"] = value;
+            }
+        }
     }
 }

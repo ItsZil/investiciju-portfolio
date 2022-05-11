@@ -35,12 +35,12 @@ namespace investiciju_portfolio
         {
             string usernameText = LoginForm_UsernameTextBox.Text;
             string passwordText = LoginForm_PasswordTextBox.Text;
-            //bool loginState = Login.CheckLogin(usernameText, passwordText);
-            //if (loginState)
-            //{
+            bool loginState = Login.CheckLogin(usernameText, passwordText);
+            if (loginState)
+            {
                 HomeWindow f3 = new HomeWindow();
                 f3.ShowDialog();
-            //}
+            }
                
         }
 

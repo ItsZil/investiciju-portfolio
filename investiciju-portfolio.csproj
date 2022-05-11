@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Utilities\DatabaseConnection.cs" />
     <Compile Include="Utilities\PasswordHandler.cs" />
+    <Compile Include="Utilities\SettingsHandler.cs" />
     <EmbeddedResource Include="Forms\HomeWindow.resx">
       <DependentUpon>HomeWindow.cs</DependentUpon>
     </EmbeddedResource>

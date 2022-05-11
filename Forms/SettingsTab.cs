@@ -1,4 +1,5 @@
-﻿using System;
+﻿using investiciju_portfolio.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,9 @@ namespace investiciju_portfolio
 
         private void SettingsTab_Load(object sender, EventArgs e)
         {
-            //SettingsTab_UsernameDisplayLabel.Text = 
-            //SettingsTab_NameDisplayLabel.Text = 
-            //SettingsTab_SurnameDisplayLabel.Text = 
+            SettingsTab_UsernameDisplayLabel.Text = SettingsHandler.GetUsername();
+            SettingsTab_NameDisplayLabel.Text = SettingsHandler.GetFirstName();
+            SettingsTab_SurnameDisplayLabel.Text = SettingsHandler.GetSurname();
             SettingsTab_CurrencySelectionBox.Text = SettingsTab_CurrencySelectionBox.Items[Properties.Settings.Default.base_currency].ToString();
         }
 
