@@ -47,10 +47,10 @@ namespace investiciju_portfolio
             this.SettingsTab_AccountDetailsLabel = new System.Windows.Forms.Label();
             this.SettingsTab_ChangePWLabel = new System.Windows.Forms.Label();
             this.ChangeCurrencyPanel = new System.Windows.Forms.Panel();
+            this.SettingsTab_CurrencySelectionBox = new investiciju_portfolio.Classes.FlatCombo();
             this.SettingsTab_SaveCurrencyButton = new System.Windows.Forms.Button();
             this.SettingsTab_ChangeBaseCurrencyLabel = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.SettingsTab_CurrencySelectionBox = new investiciju_portfolio.Classes.FlatCombo();
             this.HeaderPanel.SuspendLayout();
             this.ChangePWPanel.SuspendLayout();
             this.AccountDetailsPanel.SuspendLayout();
@@ -258,6 +258,25 @@ namespace investiciju_portfolio
             this.ChangeCurrencyPanel.Size = new System.Drawing.Size(616, 80);
             this.ChangeCurrencyPanel.TabIndex = 10;
             // 
+            // SettingsTab_CurrencySelectionBox
+            // 
+            this.SettingsTab_CurrencySelectionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.SettingsTab_CurrencySelectionBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.SettingsTab_CurrencySelectionBox.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(113)))));
+            this.SettingsTab_CurrencySelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SettingsTab_CurrencySelectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsTab_CurrencySelectionBox.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTab_CurrencySelectionBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.SettingsTab_CurrencySelectionBox.FormattingEnabled = true;
+            this.SettingsTab_CurrencySelectionBox.Items.AddRange(new object[] {
+            "Euro (€)",
+            "British Pound (£)",
+            "United States Dollar ($)"});
+            this.SettingsTab_CurrencySelectionBox.Location = new System.Drawing.Point(36, 20);
+            this.SettingsTab_CurrencySelectionBox.Name = "SettingsTab_CurrencySelectionBox";
+            this.SettingsTab_CurrencySelectionBox.Size = new System.Drawing.Size(323, 40);
+            this.SettingsTab_CurrencySelectionBox.TabIndex = 16;
+            // 
             // SettingsTab_SaveCurrencyButton
             // 
             this.SettingsTab_SaveCurrencyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -289,25 +308,6 @@ namespace investiciju_portfolio
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // SettingsTab_CurrencySelectionBox
-            // 
-            this.SettingsTab_CurrencySelectionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.SettingsTab_CurrencySelectionBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.SettingsTab_CurrencySelectionBox.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(113)))));
-            this.SettingsTab_CurrencySelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SettingsTab_CurrencySelectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsTab_CurrencySelectionBox.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsTab_CurrencySelectionBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.SettingsTab_CurrencySelectionBox.FormattingEnabled = true;
-            this.SettingsTab_CurrencySelectionBox.Items.AddRange(new object[] {
-            "Euro (€)",
-            "British Pound (£)",
-            "United States Dollar ($)"});
-            this.SettingsTab_CurrencySelectionBox.Location = new System.Drawing.Point(36, 20);
-            this.SettingsTab_CurrencySelectionBox.Name = "SettingsTab_CurrencySelectionBox";
-            this.SettingsTab_CurrencySelectionBox.Size = new System.Drawing.Size(323, 40);
-            this.SettingsTab_CurrencySelectionBox.TabIndex = 16;
-            // 
             // SettingsTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -322,6 +322,7 @@ namespace investiciju_portfolio
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingsTab";
             this.Size = new System.Drawing.Size(1382, 576);
+            this.Load += new System.EventHandler(this.SettingsTab_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.ChangePWPanel.ResumeLayout(false);
             this.ChangePWPanel.PerformLayout();

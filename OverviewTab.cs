@@ -16,5 +16,10 @@ namespace investiciju_portfolio
         {
             InitializeComponent();
         }
+
+        private void OverviewTab_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

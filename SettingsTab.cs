@@ -16,5 +16,13 @@ namespace investiciju_portfolio
         {
             InitializeComponent();
         }
+
+        private void SettingsTab_Load(object sender, EventArgs e)
+        {
+            //SettingsTab_UsernameDisplayLabel.Text = 
+            //SettingsTab_NameDisplayLabel.Text = 
+            //SettingsTab_SurnameDisplayLabel.Text = 
+            SettingsTab_CurrencySelectionBox.Text = SettingsTab_CurrencySelectionBox.Items[0].ToString();
+        }
     }
 }

@@ -240,6 +240,7 @@ namespace investiciju_portfolio
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OverviewTab";
             this.Size = new System.Drawing.Size(1382, 576);
+            this.Load += new System.EventHandler(this.OverviewTab_Load);
             this.StockPricePanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

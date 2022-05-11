@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace investiciju_portfolio.Classes
 {
+    /// <summary>
+    /// Derived class from ComboBox that allows to change all colors of the design
+    /// </summary>
     public class FlatCombo : ComboBox
     {
         private Color borderColor = Color.Gray;
