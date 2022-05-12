@@ -35,5 +35,46 @@ namespace investiciju_portfolio
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void SettingsTab_SavePWButton_Click(object sender, EventArgs e)
+        {
+            string oldPassword = SettingsTab_OldPWTextBox.Text;
+            string newPassword = SettingsTab_NewPWTextBox.Text;
+            string confirmNewPassword = SettingsTab_ConfirmNewPWTextBox.Text;
+
+            if (oldPassword.Length < 1 || newPassword.Length < 1 || confirmNewPassword.Length < 1)
+            {
+                MessageBox.Show("Ensure all fields are filled.");
+                return;
+            }
+            else if (newPassword != confirmNewPassword)
+            {
+                MessageBox.Show("New password does not match confirmation password.");
+                return;
+            }
+            else if (oldPassword == newPassword)
+            {
+                MessageBox.Show("New password matches old password.");
+                return;
+            }
+
+            string username = Properties.Settings.Default.username;
+            bool oldPasswordMatches = PasswordHandler.VerifyPassword(username, oldPassword);
+            if (!oldPasswordMatches)
+            {
+                MessageBox.Show("Old password is incorrect.");
+                return;
+            }
+
+            bool changedPassword = PasswordHandler.ChangePassword(oldPassword, newPassword);
+            if (changedPassword)
+            {
+                MessageBox.Show("Password successfully changed.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to change password.");
+            }
+        }
     }
 }

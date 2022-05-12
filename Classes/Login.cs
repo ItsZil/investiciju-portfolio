@@ -5,7 +5,7 @@ using investiciju_portfolio.Utilities;
 namespace investiciju_portfolio.Classes
 {
     /// <summary>
-    /// Class to handle registration of new users.
+    /// Class to handle logging in of existing users.
     /// </summary>
     internal static class Login
     {

@@ -60,7 +60,7 @@ namespace investiciju_portfolio.Utilities
         /// <param name="password">User password hash</param>
         /// <param name="setSettings">Whether to set local user settings</param>
         /// <returns>True if password is correct, false otherwise.</returns>
-        public static bool VerifyPassword(string username, string password, bool setSettings)
+        public static bool VerifyPassword(string username, string password, bool setSettings = false)
         {
             MySqlConnection con;
             MySqlCommand cmd;
@@ -96,6 +96,15 @@ namespace investiciju_portfolio.Utilities
                 con.Close();
                 return false;
             }
+        }
+
+        public static bool ChangePassword(string oldPassword, string newPassword)
+        {
+            int userId = Properties.Settings.Default.id;
+            if (userId < 1)
+                return false;
+
+
         }
     }
 }
