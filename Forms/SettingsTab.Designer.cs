@@ -114,7 +114,7 @@ namespace investiciju_portfolio
             this.SettingsTab_ConfirmNewPWTextBox.MaxLength = 256;
             this.SettingsTab_ConfirmNewPWTextBox.Name = "SettingsTab_ConfirmNewPWTextBox";
             this.SettingsTab_ConfirmNewPWTextBox.PasswordChar = '*';
-            this.SettingsTab_ConfirmNewPWTextBox.Size = new System.Drawing.Size(544, 33);
+            this.SettingsTab_ConfirmNewPWTextBox.Size = new System.Drawing.Size(544, 27);
             this.SettingsTab_ConfirmNewPWTextBox.TabIndex = 13;
             this.SettingsTab_ConfirmNewPWTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -128,7 +128,7 @@ namespace investiciju_portfolio
             this.SettingsTab_NewPWTextBox.MaxLength = 256;
             this.SettingsTab_NewPWTextBox.Name = "SettingsTab_NewPWTextBox";
             this.SettingsTab_NewPWTextBox.PasswordChar = '*';
-            this.SettingsTab_NewPWTextBox.Size = new System.Drawing.Size(544, 33);
+            this.SettingsTab_NewPWTextBox.Size = new System.Drawing.Size(544, 27);
             this.SettingsTab_NewPWTextBox.TabIndex = 12;
             this.SettingsTab_NewPWTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -142,7 +142,7 @@ namespace investiciju_portfolio
             this.SettingsTab_OldPWTextBox.MaxLength = 256;
             this.SettingsTab_OldPWTextBox.Name = "SettingsTab_OldPWTextBox";
             this.SettingsTab_OldPWTextBox.PasswordChar = '*';
-            this.SettingsTab_OldPWTextBox.Size = new System.Drawing.Size(544, 33);
+            this.SettingsTab_OldPWTextBox.Size = new System.Drawing.Size(544, 27);
             this.SettingsTab_OldPWTextBox.TabIndex = 11;
             this.SettingsTab_OldPWTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -167,7 +167,7 @@ namespace investiciju_portfolio
             this.SettingsTab_SurnameDisplayLabel.ForeColor = System.Drawing.Color.LightGray;
             this.SettingsTab_SurnameDisplayLabel.Location = new System.Drawing.Point(400, 308);
             this.SettingsTab_SurnameDisplayLabel.Name = "SettingsTab_SurnameDisplayLabel";
-            this.SettingsTab_SurnameDisplayLabel.Size = new System.Drawing.Size(139, 34);
+            this.SettingsTab_SurnameDisplayLabel.Size = new System.Drawing.Size(107, 26);
             this.SettingsTab_SurnameDisplayLabel.TabIndex = 6;
             this.SettingsTab_SurnameDisplayLabel.Text = "surname";
             // 
@@ -178,7 +178,7 @@ namespace investiciju_portfolio
             this.SettingsTab_NameDisplayLabel.ForeColor = System.Drawing.Color.LightGray;
             this.SettingsTab_NameDisplayLabel.Location = new System.Drawing.Point(400, 194);
             this.SettingsTab_NameDisplayLabel.Name = "SettingsTab_NameDisplayLabel";
-            this.SettingsTab_NameDisplayLabel.Size = new System.Drawing.Size(94, 34);
+            this.SettingsTab_NameDisplayLabel.Size = new System.Drawing.Size(73, 26);
             this.SettingsTab_NameDisplayLabel.TabIndex = 5;
             this.SettingsTab_NameDisplayLabel.Text = "name";
             // 
@@ -189,7 +189,7 @@ namespace investiciju_portfolio
             this.SettingsTab_SurnameLabel.ForeColor = System.Drawing.Color.White;
             this.SettingsTab_SurnameLabel.Location = new System.Drawing.Point(36, 308);
             this.SettingsTab_SurnameLabel.Name = "SettingsTab_SurnameLabel";
-            this.SettingsTab_SurnameLabel.Size = new System.Drawing.Size(143, 34);
+            this.SettingsTab_SurnameLabel.Size = new System.Drawing.Size(111, 26);
             this.SettingsTab_SurnameLabel.TabIndex = 3;
             this.SettingsTab_SurnameLabel.Text = "Surname";
             // 
@@ -200,7 +200,7 @@ namespace investiciju_portfolio
             this.SettingsTab_UsernameDisplayLabel.ForeColor = System.Drawing.Color.LightGray;
             this.SettingsTab_UsernameDisplayLabel.Location = new System.Drawing.Point(400, 80);
             this.SettingsTab_UsernameDisplayLabel.Name = "SettingsTab_UsernameDisplayLabel";
-            this.SettingsTab_UsernameDisplayLabel.Size = new System.Drawing.Size(156, 34);
+            this.SettingsTab_UsernameDisplayLabel.Size = new System.Drawing.Size(120, 26);
             this.SettingsTab_UsernameDisplayLabel.TabIndex = 2;
             this.SettingsTab_UsernameDisplayLabel.Text = "username";
             // 
@@ -211,7 +211,7 @@ namespace investiciju_portfolio
             this.SettingsTab_NameLabel.ForeColor = System.Drawing.Color.White;
             this.SettingsTab_NameLabel.Location = new System.Drawing.Point(36, 194);
             this.SettingsTab_NameLabel.Name = "SettingsTab_NameLabel";
-            this.SettingsTab_NameLabel.Size = new System.Drawing.Size(97, 34);
+            this.SettingsTab_NameLabel.Size = new System.Drawing.Size(75, 26);
             this.SettingsTab_NameLabel.TabIndex = 1;
             this.SettingsTab_NameLabel.Text = "Name";
             // 
@@ -222,7 +222,7 @@ namespace investiciju_portfolio
             this.SettingsTab_UsernameLabel.ForeColor = System.Drawing.Color.White;
             this.SettingsTab_UsernameLabel.Location = new System.Drawing.Point(36, 80);
             this.SettingsTab_UsernameLabel.Name = "SettingsTab_UsernameLabel";
-            this.SettingsTab_UsernameLabel.Size = new System.Drawing.Size(159, 34);
+            this.SettingsTab_UsernameLabel.Size = new System.Drawing.Size(122, 26);
             this.SettingsTab_UsernameLabel.TabIndex = 0;
             this.SettingsTab_UsernameLabel.Text = "Username";
             // 
@@ -233,7 +233,7 @@ namespace investiciju_portfolio
             this.SettingsTab_AccountDetailsLabel.ForeColor = System.Drawing.Color.Silver;
             this.SettingsTab_AccountDetailsLabel.Location = new System.Drawing.Point(50, 69);
             this.SettingsTab_AccountDetailsLabel.Name = "SettingsTab_AccountDetailsLabel";
-            this.SettingsTab_AccountDetailsLabel.Size = new System.Drawing.Size(233, 34);
+            this.SettingsTab_AccountDetailsLabel.Size = new System.Drawing.Size(179, 26);
             this.SettingsTab_AccountDetailsLabel.TabIndex = 8;
             this.SettingsTab_AccountDetailsLabel.Text = "Account details";
             // 
@@ -244,7 +244,7 @@ namespace investiciju_portfolio
             this.SettingsTab_ChangePWLabel.ForeColor = System.Drawing.Color.Silver;
             this.SettingsTab_ChangePWLabel.Location = new System.Drawing.Point(719, 69);
             this.SettingsTab_ChangePWLabel.Name = "SettingsTab_ChangePWLabel";
-            this.SettingsTab_ChangePWLabel.Size = new System.Drawing.Size(265, 34);
+            this.SettingsTab_ChangePWLabel.Size = new System.Drawing.Size(206, 26);
             this.SettingsTab_ChangePWLabel.TabIndex = 9;
             this.SettingsTab_ChangePWLabel.Text = "Change password";
             // 
@@ -274,7 +274,7 @@ namespace investiciju_portfolio
             "United States Dollar ($)"});
             this.SettingsTab_CurrencySelectionBox.Location = new System.Drawing.Point(36, 20);
             this.SettingsTab_CurrencySelectionBox.Name = "SettingsTab_CurrencySelectionBox";
-            this.SettingsTab_CurrencySelectionBox.Size = new System.Drawing.Size(323, 40);
+            this.SettingsTab_CurrencySelectionBox.Size = new System.Drawing.Size(323, 34);
             this.SettingsTab_CurrencySelectionBox.TabIndex = 16;
             // 
             // SettingsTab_SaveCurrencyButton
@@ -290,6 +290,7 @@ namespace investiciju_portfolio
             this.SettingsTab_SaveCurrencyButton.TabIndex = 15;
             this.SettingsTab_SaveCurrencyButton.Text = "Save ";
             this.SettingsTab_SaveCurrencyButton.UseVisualStyleBackColor = false;
+            this.SettingsTab_SaveCurrencyButton.Click += new System.EventHandler(this.SettingsTab_SaveCurrencyButton_Click);
             // 
             // SettingsTab_ChangeBaseCurrencyLabel
             // 
@@ -298,7 +299,7 @@ namespace investiciju_portfolio
             this.SettingsTab_ChangeBaseCurrencyLabel.ForeColor = System.Drawing.Color.Silver;
             this.SettingsTab_ChangeBaseCurrencyLabel.Location = new System.Drawing.Point(716, 403);
             this.SettingsTab_ChangeBaseCurrencyLabel.Name = "SettingsTab_ChangeBaseCurrencyLabel";
-            this.SettingsTab_ChangeBaseCurrencyLabel.Size = new System.Drawing.Size(332, 34);
+            this.SettingsTab_ChangeBaseCurrencyLabel.Size = new System.Drawing.Size(256, 26);
             this.SettingsTab_ChangeBaseCurrencyLabel.TabIndex = 11;
             this.SettingsTab_ChangeBaseCurrencyLabel.Text = "Change base currency";
             // 

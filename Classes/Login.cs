@@ -1,5 +1,7 @@
 ﻿using MySqlConnector;
 using Microsoft.AspNet.Identity;
+using investiciju_portfolio.Utilities;
+
 namespace investiciju_portfolio.Classes
 {
     /// <summary>
@@ -30,7 +32,11 @@ namespace investiciju_portfolio.Classes
                     var passwordHasher = new PasswordHasher();
                     var isVerified = passwordHasher.VerifyHashedPassword(dr["password"].ToString(), password) != PasswordVerificationResult.Failed;
                     if (isVerified)
+                    {
+                        // Set settings before logging in.
+                        SettingsHandler.SetSettings(dr["username"].ToString(), dr["first_name"].ToString(), dr["surname"].ToString(), (int)dr["id"]);
                         return true;
+                    }
                     else
                         System.Windows.Forms.MessageBox.Show("Invalid username and/or incorrect password.");
                 }
