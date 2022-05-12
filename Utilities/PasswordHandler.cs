@@ -98,13 +98,32 @@ namespace investiciju_portfolio.Utilities
             }
         }
 
-        public static bool ChangePassword(string oldPassword, string newPassword)
+        /// <summary>
+        /// Changes the currently logged in user's password.
+        /// </summary>
+        /// <param name="newPassword">The new password to set</param>
+        /// <returns>True if successful, false otherwise.</returns>
+        public static bool ChangePassword(string newPassword)
         {
             int userId = Properties.Settings.Default.id;
             if (userId < 1)
                 return false;
 
+            try
+            {
+                Password userPassword = CreateHash(newPassword);
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("UPDATE users SET password=@password WHERE id=@id"));
+                command.Parameters.AddWithValue("@password", userPassword.Hash);
+                command.Parameters.AddWithValue("@id", userId);
+                dbConnection.ExecuteCommand(command);
 
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
