@@ -30,8 +30,6 @@ namespace investiciju_portfolio
         private void OverviewTab_EditButton_Click(object sender, EventArgs e)
         {
 
-
-
             OverviewTab_InstrumentActionPanel.BringToFront();
         }
 
@@ -45,9 +43,6 @@ namespace investiciju_portfolio
             string Ticker = OverviewTab_TickerTextBox.Text;
             double Count = Convert.ToDouble(OverviewTab_CountTextBox.Text);
             double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox);
-
-
-
 
         }
 
