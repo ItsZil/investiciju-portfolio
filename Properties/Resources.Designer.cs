@@ -73,16 +73,6 @@ namespace investiciju_portfolio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close20px {
-            get {
-                object obj = ResourceManager.GetObject("close20px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logo77px {
             get {
                 object obj = ResourceManager.GetObject("logo77px", resourceCulture);
@@ -96,16 +86,6 @@ namespace investiciju_portfolio.Properties {
         internal static System.Drawing.Bitmap off_button20px {
             get {
                 object obj = ResourceManager.GetObject("off-button20px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x20px {
-            get {
-                object obj = ResourceManager.GetObject("x20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

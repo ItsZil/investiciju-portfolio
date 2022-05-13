@@ -121,14 +121,8 @@
   <data name="off-button20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\off-button20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x20px.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo77px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo77px.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

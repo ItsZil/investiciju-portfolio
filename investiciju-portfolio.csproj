@@ -182,8 +182,6 @@
   <ItemGroup>
     <Content Include="Logo.ico" />
     <None Include="Resources\close15px.png" />
-    <None Include="Resources\close20px.png" />
-    <None Include="Resources\x20px.jpg" />
     <EmbeddedResource Include="Resources\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
