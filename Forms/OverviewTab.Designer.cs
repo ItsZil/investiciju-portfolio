@@ -29,6 +29,10 @@ namespace investiciju_portfolio
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.StockPricePanel = new System.Windows.Forms.Panel();
             this.StockListView = new System.Windows.Forms.ListView();
             this.StockName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,14 +50,18 @@ namespace investiciju_portfolio
             this.OverviewTab_StockCountValueLabel = new System.Windows.Forms.Label();
             this.OverviewTab_CreateButton = new System.Windows.Forms.Button();
             this.OverviewTab_InstrumentButtonsPanel = new System.Windows.Forms.Panel();
-            this.OverviewTab_EditButton = new System.Windows.Forms.Button();
             this.OverviewTab_RemoveButton = new System.Windows.Forms.Button();
+            this.OverviewTab_EditButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.OverviewTab_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StockPricePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.OverviewTab_HeaderPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.OverviewTab_InstrumentButtonsPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OverviewTab_Chart)).BeginInit();
             this.SuspendLayout();
             // 
             // StockPricePanel
@@ -256,19 +264,6 @@ namespace investiciju_portfolio
             this.OverviewTab_InstrumentButtonsPanel.Size = new System.Drawing.Size(310, 30);
             this.OverviewTab_InstrumentButtonsPanel.TabIndex = 6;
             // 
-            // OverviewTab_EditButton
-            // 
-            this.OverviewTab_EditButton.FlatAppearance.BorderSize = 0;
-            this.OverviewTab_EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewTab_EditButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_EditButton.ForeColor = System.Drawing.Color.White;
-            this.OverviewTab_EditButton.Location = new System.Drawing.Point(110, 0);
-            this.OverviewTab_EditButton.Name = "OverviewTab_EditButton";
-            this.OverviewTab_EditButton.Size = new System.Drawing.Size(90, 30);
-            this.OverviewTab_EditButton.TabIndex = 7;
-            this.OverviewTab_EditButton.Text = "Edit";
-            this.OverviewTab_EditButton.UseVisualStyleBackColor = true;
-            // 
             // OverviewTab_RemoveButton
             // 
             this.OverviewTab_RemoveButton.FlatAppearance.BorderSize = 0;
@@ -282,10 +277,86 @@ namespace investiciju_portfolio
             this.OverviewTab_RemoveButton.Text = "Remove";
             this.OverviewTab_RemoveButton.UseVisualStyleBackColor = true;
             // 
+            // OverviewTab_EditButton
+            // 
+            this.OverviewTab_EditButton.FlatAppearance.BorderSize = 0;
+            this.OverviewTab_EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_EditButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_EditButton.ForeColor = System.Drawing.Color.White;
+            this.OverviewTab_EditButton.Location = new System.Drawing.Point(110, 0);
+            this.OverviewTab_EditButton.Name = "OverviewTab_EditButton";
+            this.OverviewTab_EditButton.Size = new System.Drawing.Size(90, 30);
+            this.OverviewTab_EditButton.TabIndex = 7;
+            this.OverviewTab_EditButton.Text = "Edit";
+            this.OverviewTab_EditButton.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.OverviewTab_Chart);
+            this.panel2.Location = new System.Drawing.Point(315, 156);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1062, 401);
+            this.panel2.TabIndex = 8;
+            // 
+            // OverviewTab_Chart
+            // 
+            this.OverviewTab_Chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.OverviewTab_Chart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OverviewTab_Chart.BackSecondaryColor = System.Drawing.Color.Black;
+            this.OverviewTab_Chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.OverviewTab_Chart.BorderlineWidth = 0;
+            this.OverviewTab_Chart.BorderSkin.BorderWidth = 0;
+            this.OverviewTab_Chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            chartArea1.Name = "ChartArea1";
+            this.OverviewTab_Chart.ChartAreas.Add(chartArea1);
+            this.OverviewTab_Chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.OverviewTab_Chart.Legends.Add(legend1);
+            this.OverviewTab_Chart.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_Chart.Name = "OverviewTab_Chart";
+            this.OverviewTab_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.OverviewTab_Chart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))))};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            series1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.White;
+            series1.Name = "Series1";
+            this.OverviewTab_Chart.Series.Add(series1);
+            this.OverviewTab_Chart.Size = new System.Drawing.Size(1062, 401);
+            this.OverviewTab_Chart.TabIndex = 0;
+            this.OverviewTab_Chart.Text = "testestest";
+            title1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.LightGray;
+            title1.Name = "OverviewTab_ChartTitle";
+            title1.Text = "TEST";
+            this.OverviewTab_Chart.Titles.Add(title1);
+            // 
             // OverviewTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.OverviewTab_InstrumentButtonsPanel);
             this.Controls.Add(this.StockPricePanel);
             this.Controls.Add(this.panel4);
@@ -302,6 +373,8 @@ namespace investiciju_portfolio
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.OverviewTab_InstrumentButtonsPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OverviewTab_Chart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,5 +400,7 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Panel OverviewTab_InstrumentButtonsPanel;
         private System.Windows.Forms.Button OverviewTab_RemoveButton;
         private System.Windows.Forms.Button OverviewTab_EditButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart OverviewTab_Chart;
     }
 }
