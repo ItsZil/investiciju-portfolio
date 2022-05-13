@@ -234,7 +234,10 @@ namespace investiciju_portfolio
             // 
             // OverviewTab_CreateButton
             // 
+            this.OverviewTab_CreateButton.FlatAppearance.BorderSize = 0;
+            this.OverviewTab_CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OverviewTab_CreateButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_CreateButton.ForeColor = System.Drawing.Color.White;
             this.OverviewTab_CreateButton.Location = new System.Drawing.Point(0, 0);
             this.OverviewTab_CreateButton.Name = "OverviewTab_CreateButton";
             this.OverviewTab_CreateButton.Size = new System.Drawing.Size(90, 30);
@@ -255,7 +258,10 @@ namespace investiciju_portfolio
             // 
             // OverviewTab_EditButton
             // 
+            this.OverviewTab_EditButton.FlatAppearance.BorderSize = 0;
+            this.OverviewTab_EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OverviewTab_EditButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_EditButton.ForeColor = System.Drawing.Color.White;
             this.OverviewTab_EditButton.Location = new System.Drawing.Point(110, 0);
             this.OverviewTab_EditButton.Name = "OverviewTab_EditButton";
             this.OverviewTab_EditButton.Size = new System.Drawing.Size(90, 30);
@@ -265,7 +271,10 @@ namespace investiciju_portfolio
             // 
             // OverviewTab_RemoveButton
             // 
+            this.OverviewTab_RemoveButton.FlatAppearance.BorderSize = 0;
+            this.OverviewTab_RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OverviewTab_RemoveButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_RemoveButton.ForeColor = System.Drawing.Color.White;
             this.OverviewTab_RemoveButton.Location = new System.Drawing.Point(220, 0);
             this.OverviewTab_RemoveButton.Name = "OverviewTab_RemoveButton";
             this.OverviewTab_RemoveButton.Size = new System.Drawing.Size(90, 30);
