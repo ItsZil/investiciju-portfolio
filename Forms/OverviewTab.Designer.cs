@@ -54,6 +54,7 @@ namespace investiciju_portfolio
             this.OverviewTab_EditButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.OverviewTab_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.StockPricePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.OverviewTab_HeaderPanel.SuspendLayout();
@@ -67,6 +68,7 @@ namespace investiciju_portfolio
             // StockPricePanel
             // 
             this.StockPricePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.StockPricePanel.Controls.Add(this.panel5);
             this.StockPricePanel.Controls.Add(this.StockListView);
             this.StockPricePanel.Location = new System.Drawing.Point(-1, -2);
             this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2);
@@ -88,6 +90,7 @@ namespace investiciju_portfolio
             this.StockListView.HideSelection = false;
             this.StockListView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.StockListView.Location = new System.Drawing.Point(0, 0);
+            this.StockListView.MultiSelect = false;
             this.StockListView.Name = "StockListView";
             this.StockListView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StockListView.Size = new System.Drawing.Size(310, 547);
@@ -252,6 +255,7 @@ namespace investiciju_portfolio
             this.OverviewTab_CreateButton.TabIndex = 5;
             this.OverviewTab_CreateButton.Text = "Create";
             this.OverviewTab_CreateButton.UseVisualStyleBackColor = true;
+            this.OverviewTab_CreateButton.Click += new System.EventHandler(this.OverviewTab_CreateButton_Click);
             // 
             // OverviewTab_InstrumentButtonsPanel
             // 
@@ -276,6 +280,7 @@ namespace investiciju_portfolio
             this.OverviewTab_RemoveButton.TabIndex = 8;
             this.OverviewTab_RemoveButton.Text = "Remove";
             this.OverviewTab_RemoveButton.UseVisualStyleBackColor = true;
+            this.OverviewTab_RemoveButton.Click += new System.EventHandler(this.OverviewTab_RemoveButton_Click);
             // 
             // OverviewTab_EditButton
             // 
@@ -289,6 +294,7 @@ namespace investiciju_portfolio
             this.OverviewTab_EditButton.TabIndex = 7;
             this.OverviewTab_EditButton.Text = "Edit";
             this.OverviewTab_EditButton.UseVisualStyleBackColor = true;
+            this.OverviewTab_EditButton.Click += new System.EventHandler(this.OverviewTab_EditButton_Click);
             // 
             // panel2
             // 
@@ -352,6 +358,13 @@ namespace investiciju_portfolio
             title1.Text = "TEST";
             this.OverviewTab_Chart.Titles.Add(title1);
             // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(4, 457);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(310, 86);
+            this.panel5.TabIndex = 1;
+            // 
             // OverviewTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -402,5 +415,6 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Button OverviewTab_EditButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart OverviewTab_Chart;
+        private System.Windows.Forms.Panel panel5;
     }
 }

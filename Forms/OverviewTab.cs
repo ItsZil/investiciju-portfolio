@@ -21,5 +21,20 @@ namespace investiciju_portfolio
         {
 
         }
+
+        private void OverviewTab_CreateButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OverviewTab_EditButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OverviewTab_RemoveButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
