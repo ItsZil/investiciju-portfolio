@@ -36,7 +36,7 @@ namespace investiciju_portfolio
             this.OverviewTab_EquityValueLabel = new System.Windows.Forms.Label();
             this.OverviewTab_EquityLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.OverviewTab_HeaderPanel = new System.Windows.Forms.Panel();
             this.OverviewTab_OverviewLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.OverviewTab_PNLLabel = new System.Windows.Forms.Label();
@@ -44,22 +44,26 @@ namespace investiciju_portfolio
             this.panel4 = new System.Windows.Forms.Panel();
             this.OverviewTab_StockCountLabel = new System.Windows.Forms.Label();
             this.OverviewTab_StockCountValueLabel = new System.Windows.Forms.Label();
+            this.OverviewTab_CreateButton = new System.Windows.Forms.Button();
+            this.OverviewTab_InstrumentButtonsPanel = new System.Windows.Forms.Panel();
+            this.OverviewTab_EditButton = new System.Windows.Forms.Button();
+            this.OverviewTab_RemoveButton = new System.Windows.Forms.Button();
             this.StockPricePanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.OverviewTab_HeaderPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.OverviewTab_InstrumentButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // StockPricePanel
             // 
             this.StockPricePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.StockPricePanel.Controls.Add(this.StockListView);
-            this.StockPricePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.StockPricePanel.Location = new System.Drawing.Point(0, 0);
+            this.StockPricePanel.Location = new System.Drawing.Point(-1, -1);
             this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2);
             this.StockPricePanel.Name = "StockPricePanel";
-            this.StockPricePanel.Size = new System.Drawing.Size(310, 576);
+            this.StockPricePanel.Size = new System.Drawing.Size(310, 547);
             this.StockPricePanel.TabIndex = 0;
             // 
             // StockListView
@@ -71,13 +75,14 @@ namespace investiciju_portfolio
             this.StockPrice});
             this.StockListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.StockListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StockListView.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StockListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.StockListView.HideSelection = false;
             this.StockListView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.StockListView.Location = new System.Drawing.Point(0, 0);
             this.StockListView.Name = "StockListView";
             this.StockListView.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StockListView.Size = new System.Drawing.Size(310, 576);
+            this.StockListView.Size = new System.Drawing.Size(310, 547);
             this.StockListView.TabIndex = 0;
             this.StockListView.TileSize = new System.Drawing.Size(1, 1);
             this.StockListView.UseCompatibleStateImageBehavior = false;
@@ -131,14 +136,13 @@ namespace investiciju_portfolio
             this.panel1.Size = new System.Drawing.Size(350, 80);
             this.panel1.TabIndex = 3;
             // 
-            // panel2
+            // OverviewTab_HeaderPanel
             // 
-            this.panel2.Controls.Add(this.OverviewTab_OverviewLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(310, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1072, 52);
-            this.panel2.TabIndex = 4;
+            this.OverviewTab_HeaderPanel.Controls.Add(this.OverviewTab_OverviewLabel);
+            this.OverviewTab_HeaderPanel.Location = new System.Drawing.Point(310, 0);
+            this.OverviewTab_HeaderPanel.Name = "OverviewTab_HeaderPanel";
+            this.OverviewTab_HeaderPanel.Size = new System.Drawing.Size(1072, 52);
+            this.OverviewTab_HeaderPanel.TabIndex = 4;
             // 
             // OverviewTab_OverviewLabel
             // 
@@ -228,24 +232,67 @@ namespace investiciju_portfolio
             this.OverviewTab_StockCountValueLabel.Text = "5";
             this.OverviewTab_StockCountValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // OverviewTab_CreateButton
+            // 
+            this.OverviewTab_CreateButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_CreateButton.Location = new System.Drawing.Point(0, 0);
+            this.OverviewTab_CreateButton.Name = "OverviewTab_CreateButton";
+            this.OverviewTab_CreateButton.Size = new System.Drawing.Size(90, 30);
+            this.OverviewTab_CreateButton.TabIndex = 5;
+            this.OverviewTab_CreateButton.Text = "Create";
+            this.OverviewTab_CreateButton.UseVisualStyleBackColor = true;
+            // 
+            // OverviewTab_InstrumentButtonsPanel
+            // 
+            this.OverviewTab_InstrumentButtonsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            this.OverviewTab_InstrumentButtonsPanel.Controls.Add(this.OverviewTab_RemoveButton);
+            this.OverviewTab_InstrumentButtonsPanel.Controls.Add(this.OverviewTab_CreateButton);
+            this.OverviewTab_InstrumentButtonsPanel.Controls.Add(this.OverviewTab_EditButton);
+            this.OverviewTab_InstrumentButtonsPanel.Location = new System.Drawing.Point(0, 547);
+            this.OverviewTab_InstrumentButtonsPanel.Name = "OverviewTab_InstrumentButtonsPanel";
+            this.OverviewTab_InstrumentButtonsPanel.Size = new System.Drawing.Size(310, 30);
+            this.OverviewTab_InstrumentButtonsPanel.TabIndex = 6;
+            // 
+            // OverviewTab_EditButton
+            // 
+            this.OverviewTab_EditButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_EditButton.Location = new System.Drawing.Point(110, 0);
+            this.OverviewTab_EditButton.Name = "OverviewTab_EditButton";
+            this.OverviewTab_EditButton.Size = new System.Drawing.Size(90, 30);
+            this.OverviewTab_EditButton.TabIndex = 7;
+            this.OverviewTab_EditButton.Text = "Edit";
+            this.OverviewTab_EditButton.UseVisualStyleBackColor = true;
+            // 
+            // OverviewTab_RemoveButton
+            // 
+            this.OverviewTab_RemoveButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_RemoveButton.Location = new System.Drawing.Point(220, 0);
+            this.OverviewTab_RemoveButton.Name = "OverviewTab_RemoveButton";
+            this.OverviewTab_RemoveButton.Size = new System.Drawing.Size(90, 30);
+            this.OverviewTab_RemoveButton.TabIndex = 8;
+            this.OverviewTab_RemoveButton.Text = "Remove";
+            this.OverviewTab_RemoveButton.UseVisualStyleBackColor = true;
+            // 
             // OverviewTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            this.Controls.Add(this.OverviewTab_InstrumentButtonsPanel);
+            this.Controls.Add(this.StockPricePanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.OverviewTab_HeaderPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.StockPricePanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OverviewTab";
             this.Size = new System.Drawing.Size(1382, 576);
             this.Load += new System.EventHandler(this.OverviewTab_Load);
             this.StockPricePanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.OverviewTab_HeaderPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.OverviewTab_InstrumentButtonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,7 +303,7 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Label OverviewTab_EquityValueLabel;
         private System.Windows.Forms.Label OverviewTab_EquityLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel OverviewTab_HeaderPanel;
         private System.Windows.Forms.Label OverviewTab_OverviewLabel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label OverviewTab_PNLLabel;
@@ -267,5 +314,9 @@ namespace investiciju_portfolio
         private System.Windows.Forms.ColumnHeader StockName;
         private System.Windows.Forms.ColumnHeader StockPrice;
         private System.Windows.Forms.ListView StockListView;
+        private System.Windows.Forms.Button OverviewTab_CreateButton;
+        private System.Windows.Forms.Panel OverviewTab_InstrumentButtonsPanel;
+        private System.Windows.Forms.Button OverviewTab_RemoveButton;
+        private System.Windows.Forms.Button OverviewTab_EditButton;
     }
 }
