@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using Microsoft.Data.Analysis;
 
-namespace investiciju_portfolio.Utilities
+
+namespace investiciju_portfolio
 {
     public class ApiHelper
     {
@@ -29,6 +31,19 @@ namespace investiciju_portfolio.Utilities
             sr.Close();
             File.WriteAllText("stockdata.csv", results);
 
+        }
+
+        public double getPrice(string stock)
+        {
+            SaveCSVFromURL(stock);
+
+
+            DataFrame df = DataFrame.LoadCsv("stockdata.csv");
+
+            DataFrameRow row = df.Rows[0];
+
+            string price = row[1].ToString();
+            return 2;
         }
     }
 }
