@@ -66,6 +66,12 @@ namespace investiciju_portfolio.Properties {
         internal static System.Drawing.Bitmap close15px {
             get {
                 object obj = ResourceManager.GetObject("close15px", resourceCulture);
+                 return ((System.Drawing.Bitmap)(obj));
+            }
+
+        internal static System.Drawing.Bitmap LeftArrow30px {
+            get {
+                object obj = ResourceManager.GetObject("LeftArrow30px", resource
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
