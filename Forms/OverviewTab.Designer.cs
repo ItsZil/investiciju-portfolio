@@ -60,7 +60,7 @@ namespace investiciju_portfolio
             // 
             this.StockPricePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.StockPricePanel.Controls.Add(this.StockListView);
-            this.StockPricePanel.Location = new System.Drawing.Point(-1, -1);
+            this.StockPricePanel.Location = new System.Drawing.Point(-1, -2);
             this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2);
             this.StockPricePanel.Name = "StockPricePanel";
             this.StockPricePanel.Size = new System.Drawing.Size(310, 547);
