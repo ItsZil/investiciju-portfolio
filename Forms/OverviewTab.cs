@@ -19,22 +19,41 @@ namespace investiciju_portfolio
 
         private void OverviewTab_Load(object sender, EventArgs e)
         {
-
+            OverviewTab_InstrumentActionPanel.SendToBack();
         }
 
         private void OverviewTab_CreateButton_Click(object sender, EventArgs e)
         {
-
+            OverviewTab_InstrumentActionPanel.BringToFront();
         }
 
         private void OverviewTab_EditButton_Click(object sender, EventArgs e)
         {
 
+
+
+            OverviewTab_InstrumentActionPanel.BringToFront();
         }
 
         private void OverviewTab_RemoveButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void OverviewTab_ConfirmButton_Click(object sender, EventArgs e)
+        {
+            string Ticker = OverviewTab_TickerTextBox.Text;
+            double Count = Convert.ToDouble(OverviewTab_CountTextBox.Text);
+            double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox);
+
+
+
+
+        }
+
+        private void Overviewtab_InstrumentsActionPanel_CloseButton_Click(object sender, EventArgs e)
+        {
+            OverviewTab_InstrumentActionPanel.SendToBack();
         }
     }
 }

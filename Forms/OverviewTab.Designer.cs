@@ -34,6 +34,12 @@ namespace investiciju_portfolio
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.StockPricePanel = new System.Windows.Forms.Panel();
+            this.OverviewTab_InstrumentActionPanel = new System.Windows.Forms.Panel();
+            this.Overviewtab_InstrumentsActionPanel_CloseButton = new System.Windows.Forms.Button();
+            this.OverviewTab_ConfirmButton = new System.Windows.Forms.Button();
+            this.OverviewTab_AvgPriceTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
+            this.OverviewTab_CountTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
+            this.OverviewTab_TickerTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
             this.StockListView = new System.Windows.Forms.ListView();
             this.StockName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StockPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,8 +60,8 @@ namespace investiciju_portfolio
             this.OverviewTab_EditButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.OverviewTab_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.StockPricePanel.SuspendLayout();
+            this.OverviewTab_InstrumentActionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.OverviewTab_HeaderPanel.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,13 +74,97 @@ namespace investiciju_portfolio
             // StockPricePanel
             // 
             this.StockPricePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.StockPricePanel.Controls.Add(this.panel5);
+            this.StockPricePanel.Controls.Add(this.OverviewTab_InstrumentActionPanel);
             this.StockPricePanel.Controls.Add(this.StockListView);
             this.StockPricePanel.Location = new System.Drawing.Point(-1, -2);
             this.StockPricePanel.Margin = new System.Windows.Forms.Padding(2);
             this.StockPricePanel.Name = "StockPricePanel";
             this.StockPricePanel.Size = new System.Drawing.Size(310, 547);
             this.StockPricePanel.TabIndex = 0;
+            // 
+            // OverviewTab_InstrumentActionPanel
+            // 
+            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.Overviewtab_InstrumentsActionPanel_CloseButton);
+            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_ConfirmButton);
+            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_AvgPriceTextBox);
+            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_CountTextBox);
+            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_TickerTextBox);
+            this.OverviewTab_InstrumentActionPanel.Location = new System.Drawing.Point(0, 441);
+            this.OverviewTab_InstrumentActionPanel.Name = "OverviewTab_InstrumentActionPanel";
+            this.OverviewTab_InstrumentActionPanel.Size = new System.Drawing.Size(310, 102);
+            this.OverviewTab_InstrumentActionPanel.TabIndex = 1;
+            // 
+            // Overviewtab_InstrumentsActionPanel_CloseButton
+            // 
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.FlatAppearance.BorderSize = 0;
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Image = global::investiciju_portfolio.Properties.Resources.close15px;
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Location = new System.Drawing.Point(291, 0);
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Name = "Overviewtab_InstrumentsActionPanel_CloseButton";
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Size = new System.Drawing.Size(20, 20);
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.TabIndex = 17;
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.UseVisualStyleBackColor = false;
+            this.Overviewtab_InstrumentsActionPanel_CloseButton.Click += new System.EventHandler(this.Overviewtab_InstrumentsActionPanel_CloseButton_Click);
+            // 
+            // OverviewTab_ConfirmButton
+            // 
+            this.OverviewTab_ConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_ConfirmButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewTab_ConfirmButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_ConfirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_ConfirmButton.Location = new System.Drawing.Point(210, 74);
+            this.OverviewTab_ConfirmButton.Name = "OverviewTab_ConfirmButton";
+            this.OverviewTab_ConfirmButton.Size = new System.Drawing.Size(97, 25);
+            this.OverviewTab_ConfirmButton.TabIndex = 16;
+            this.OverviewTab_ConfirmButton.Text = "Confirm";
+            this.OverviewTab_ConfirmButton.UseVisualStyleBackColor = false;
+            this.OverviewTab_ConfirmButton.Click += new System.EventHandler(this.OverviewTab_ConfirmButton_Click);
+            // 
+            // OverviewTab_AvgPriceTextBox
+            // 
+            this.OverviewTab_AvgPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_AvgPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_AvgPriceTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_AvgPriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_AvgPriceTextBox.Hint = "Avg. Price";
+            this.OverviewTab_AvgPriceTextBox.Location = new System.Drawing.Point(210, 28);
+            this.OverviewTab_AvgPriceTextBox.MaxLength = 64;
+            this.OverviewTab_AvgPriceTextBox.Name = "OverviewTab_AvgPriceTextBox";
+            this.OverviewTab_AvgPriceTextBox.Size = new System.Drawing.Size(100, 21);
+            this.OverviewTab_AvgPriceTextBox.TabIndex = 15;
+            this.OverviewTab_AvgPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OverviewTab_CountTextBox
+            // 
+            this.OverviewTab_CountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_CountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_CountTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_CountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_CountTextBox.Hint = "Count";
+            this.OverviewTab_CountTextBox.Location = new System.Drawing.Point(105, 28);
+            this.OverviewTab_CountTextBox.MaxLength = 64;
+            this.OverviewTab_CountTextBox.Name = "OverviewTab_CountTextBox";
+            this.OverviewTab_CountTextBox.Size = new System.Drawing.Size(100, 21);
+            this.OverviewTab_CountTextBox.TabIndex = 14;
+            this.OverviewTab_CountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OverviewTab_TickerTextBox
+            // 
+            this.OverviewTab_TickerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_TickerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_TickerTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_TickerTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_TickerTextBox.Hint = "Ticker";
+            this.OverviewTab_TickerTextBox.Location = new System.Drawing.Point(0, 28);
+            this.OverviewTab_TickerTextBox.MaxLength = 64;
+            this.OverviewTab_TickerTextBox.Name = "OverviewTab_TickerTextBox";
+            this.OverviewTab_TickerTextBox.Size = new System.Drawing.Size(100, 21);
+            this.OverviewTab_TickerTextBox.TabIndex = 13;
+            this.OverviewTab_TickerTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StockListView
             // 
@@ -358,13 +448,6 @@ namespace investiciju_portfolio
             title1.Text = "TEST";
             this.OverviewTab_Chart.Titles.Add(title1);
             // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(4, 457);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(310, 86);
-            this.panel5.TabIndex = 1;
-            // 
             // OverviewTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -381,6 +464,8 @@ namespace investiciju_portfolio
             this.Size = new System.Drawing.Size(1382, 576);
             this.Load += new System.EventHandler(this.OverviewTab_Load);
             this.StockPricePanel.ResumeLayout(false);
+            this.OverviewTab_InstrumentActionPanel.ResumeLayout(false);
+            this.OverviewTab_InstrumentActionPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.OverviewTab_HeaderPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -415,6 +500,11 @@ namespace investiciju_portfolio
         private System.Windows.Forms.Button OverviewTab_EditButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart OverviewTab_Chart;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel OverviewTab_InstrumentActionPanel;
+        private Classes.WatermarkTextBox OverviewTab_AvgPriceTextBox;
+        private Classes.WatermarkTextBox OverviewTab_CountTextBox;
+        private Classes.WatermarkTextBox OverviewTab_TickerTextBox;
+        private System.Windows.Forms.Button OverviewTab_ConfirmButton;
+        private System.Windows.Forms.Button Overviewtab_InstrumentsActionPanel_CloseButton;
     }
 }
