@@ -63,58 +63,62 @@ namespace investiciju_portfolio
 
         private void OverviewTab_ConfirmButton_Click(object sender, EventArgs e)
         {
-            string Ticker = OverviewTab_TickerTextBox.Text;
-            double Count = Convert.ToDouble(OverviewTab_CountTextBox.Text);
-            double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox.Text);
 
-            ListViewItem listViewItem = new ListViewItem(Ticker);
-
-            if (CreateIsClicked)
+            if (OverviewTab_TickerTextBox.Text == string.Empty || OverviewTab_CountTextBox.Text == string.Empty || OverviewTab_AvgPriceTextBox.Text == String.Empty)
+                MessageBox.Show("Write in all of boxes");
+            else
             {
-                listViewItem.Text = Ticker;
-                
-                
-                bool stockExists = StockHandler.stockExists(Ticker);
-                bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
-                if (!stockExists)
+                string Ticker = OverviewTab_TickerTextBox.Text;
+                double Count = Convert.ToDouble(OverviewTab_CountTextBox.Text);
+                double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox.Text);
+                ListViewItem listViewItem = new ListViewItem(Ticker);
+                if (CreateIsClicked)
                 {
-                    if (createdStock)
-                    {
-                        StockAPI stockAPI = new StockAPI();
-                        double RealPrice = stockAPI.getPrice(Ticker, 0);
-                        listViewItem.SubItems.Add(RealPrice.ToString());
-                        StockListView.Items.Add(listViewItem);
+                    listViewItem.Text = Ticker;
 
+
+                    bool stockExists = StockHandler.stockExists(Ticker);
+                    bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
+                    if (!stockExists)
+                    {
+                        if (createdStock)
+                        {
+                            StockAPI stockAPI = new StockAPI();
+                            double RealPrice = stockAPI.getPrice(Ticker, 0);
+                            listViewItem.SubItems.Add(RealPrice.ToString());
+                            StockListView.Items.Add(listViewItem);
+
+                            OverviewTab_TickerTextBox.Text = string.Empty;
+                            OverviewTab_CountTextBox.Text = string.Empty;
+                            OverviewTab_AvgPriceTextBox.Text = string.Empty;
+
+                            MessageBox.Show(Ticker + " stock successfully added.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add " + Ticker + " stock.");
+                        }
+                    }
+                    else
+                        MessageBox.Show(Ticker + " stock already exists.");
+                }
+
+                if (EditIsClicked)
+                {
+
+                    bool editedStock = StockHandler.EditStock(Count, AvgPrice, Ticker);
+                    if (editedStock)
+                    {
                         OverviewTab_TickerTextBox.Text = string.Empty;
                         OverviewTab_CountTextBox.Text = string.Empty;
                         OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
-                        MessageBox.Show(Ticker + " stock successfully added.");
+                        MessageBox.Show(Ticker + " stock successfully edited.");
                     }
                     else
                     {
-                        MessageBox.Show("Failed to add " + Ticker + " stock.");
+                        MessageBox.Show("Failed to edit " + Ticker + " stock.");
                     }
-                }
-                else
-                    MessageBox.Show(Ticker + " stock already exists.");
-            }
-
-            if (EditIsClicked)
-            {
-                
-                bool editedStock = StockHandler.EditStock(Count, AvgPrice, Ticker);
-                if (editedStock)
-                {
-                    OverviewTab_TickerTextBox.Text = string.Empty;
-                    OverviewTab_CountTextBox.Text = string.Empty;
-                    OverviewTab_AvgPriceTextBox.Text = string.Empty;
-
-                    MessageBox.Show(Ticker + " stock successfully edited.");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to edit " + Ticker + " stock.");
                 }
             }
         }
