@@ -87,7 +87,7 @@ namespace investiciju_portfolio
         {
 
             if (OverviewTab_TickerTextBox.Text == string.Empty || OverviewTab_CountTextBox.Text == string.Empty || OverviewTab_AvgPriceTextBox.Text == String.Empty)
-                MessageBox.Show("Write in all of boxes");
+                MessageBox.Show("Ensure all fields are filled in.");
             else
             {
                 string Ticker = OverviewTab_TickerTextBox.Text;
