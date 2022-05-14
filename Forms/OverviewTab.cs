@@ -12,6 +12,8 @@ namespace investiciju_portfolio
 {
     public partial class OverviewTab : UserControl
     {
+        private bool CreateIsClicked = false;
+        private bool EditIsClicked = false;
         public OverviewTab()
         {
             InitializeComponent();
@@ -24,13 +26,32 @@ namespace investiciju_portfolio
 
         private void OverviewTab_CreateButton_Click(object sender, EventArgs e)
         {
-            OverviewTab_InstrumentActionPanel.BringToFront();
+            if (!CreateIsClicked)
+            {
+                OverviewTab_InstrumentActionPanel.BringToFront();
+                CreateIsClicked = true;
+                EditIsClicked = false;
+            }
+            else
+            {
+                OverviewTab_InstrumentActionPanel.SendToBack();
+                CreateIsClicked = false;
+            }
         }
 
         private void OverviewTab_EditButton_Click(object sender, EventArgs e)
         {
-
-            OverviewTab_InstrumentActionPanel.BringToFront();
+            if (!EditIsClicked)
+            {
+                OverviewTab_InstrumentActionPanel.BringToFront();
+                EditIsClicked = true;
+                CreateIsClicked = false;
+            }
+            else
+            {
+                OverviewTab_InstrumentActionPanel.SendToBack();
+                EditIsClicked = false;
+            }
         }
 
         private void OverviewTab_RemoveButton_Click(object sender, EventArgs e)
