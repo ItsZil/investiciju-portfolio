@@ -13,10 +13,10 @@ namespace investiciju_portfolio.Utilities
     static internal class EquityHandler
     {
         /// <summary>
-        /// Changes stock average price and/or the amount
+        /// Calculates the total value of the user's instruments.
         /// </summary>
-        /// <returns></returns>
-        public static double countValue()
+        /// <returns>Total value</returns>
+        public static double CountValue()
         {
             double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
@@ -28,17 +28,43 @@ namespace investiciju_portfolio.Utilities
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        StockAPI stockAPI = new StockAPI();
-                        double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
+                        double RealPrice = StockAPI.GetPrice(dr["ticker"].ToString(), 0);
                         value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
                     return value;
 
                 }
             }
-            
-
         }
-        
+
+        /// <summary>
+        /// Calculates the total value of the user's instruments for n days
+        /// </summary>
+        /// <param name="days">Number of day to look back at</param>
+        /// <returns>Array of total values for n days</returns>
+        public static double[] CountValue(int days)
+        {
+            double[] values = new double[] { 0, 0, 0, 0, 0, 0, 0 };
+            using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
+            {
+                MySqlDataReader dr;
+                conn.Open();
+                using (var cmd = new MySqlCommand("SELECT * FROM instruments where fk_user='" + Properties.Settings.Default.id + "'", conn))
+                {
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        double[] prices = StockAPI.GetPrices(dr["ticker"].ToString(), 7);
+                        for (int i = 0; i < 7; i++)
+                        {
+                            values[i] += prices[i] * Int32.Parse(dr["count"].ToString());
+                        }
+                    }
+                    return values;
+
+                }
+            }
+        }
+
     }
 }

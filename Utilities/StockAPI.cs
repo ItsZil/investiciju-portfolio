@@ -10,24 +10,20 @@ using Microsoft.Data.Analysis;
 
 namespace investiciju_portfolio
 {
-    public class StockAPI
+    /// <summary>
+    /// API class to retrieve stock prices.
+    /// </summary>
+    public static class StockAPI
     {
-        //ESVY1L813KK0BO7V
-       
-        private string _apiKey;
-
-        public StockAPI(string apiKey = "ESVY1L813KK0BO7V")
-        {
-            this._apiKey = apiKey;
-        }
+        private static string _apiKey = "ESVY1L813KK0BO7V";
 
         /// <summary>
         /// Saves stock's data to csv file
         /// </summary>
         /// <param name="symbol"> stock's ticker </param>
-        public void SaveCSVFromURL(string symbol)
+        public static void SaveCSVFromURL(string symbol)
         {
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://" + $@"www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={this._apiKey}&datatype=csv");
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://" + $@"www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={_apiKey}&datatype=csv");
             HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
 
             StreamReader sr = new StreamReader(resp.GetResponseStream());
@@ -44,7 +40,7 @@ namespace investiciju_portfolio
         /// <param name="stock"> stock's ticker </param>
         /// <param name="rowsInd"> number of days passed from today (Assumption) </param>
         /// <returns></returns>
-        public double getPrice(string stock, int rowsInd)
+        public static double GetPrice(string stock, int rowsInd)
         {
             SaveCSVFromURL(stock);
 
@@ -56,5 +52,26 @@ namespace investiciju_portfolio
             double price = Convert.ToDouble(row[1]);
             return price;
         }
+
+        /// <summary>
+        /// Returns a double list of prices for multiple days.
+        /// </summary>
+        /// <param name="stock">The stock's ticker</param>
+        /// <param name="dayCount">Number of days</param>
+        /// <returns></returns>
+        public static double[] GetPrices(string stock, int dayCount)
+        {
+            double[] prices = new double[dayCount];
+            SaveCSVFromURL(stock);
+
+            DataFrame df = DataFrame.LoadCsv("stockdata.csv");
+            for (int i = 0; i < dayCount; i++)
+            {
+                DataFrameRow row = df.Rows[7 - i];
+                prices[i] = Convert.ToDouble(row[1]);
+            }
+            return prices;
+        }
+
     }
 }

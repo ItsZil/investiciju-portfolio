@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace investiciju_portfolio
 {
@@ -25,6 +26,7 @@ namespace investiciju_portfolio
         private void OverviewTab_Load(object sender, EventArgs e)
         {
             OverviewTab_InstrumentActionPanel.SendToBack();
+
             double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
             {
@@ -32,25 +34,47 @@ namespace investiciju_portfolio
                 conn.Open();
                 using (var cmd = new MySqlCommand("SELECT * FROM instruments where fk_user='" + Properties.Settings.Default.id + "'", conn))
                 {
-                    
+
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
                         ListViewItem listViewItem = new ListViewItem(dr["ticker"].ToString());
                         listViewItem.Text = dr["ticker"].ToString();
-                        StockAPI stockAPI = new StockAPI();
-                        double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
+                        double RealPrice = Math.Round(StockAPI.GetPrice(dr["ticker"].ToString(), 0), 3);
                         listViewItem.SubItems.Add(RealPrice.ToString());
+                        listViewItem.ForeColor = Color.White;
                         StockListView.Items.Add(listViewItem);
                         value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
-                   
+
                 }
             }
+            RecalculateStockCount();
+            OverviewTab_EquityValueLabel.Text = Math.Round(value, 3).ToString();
+
+            Series series = new Series();
+            int[] x = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            double[] y = EquityHandler.CountValue(7);
+
+            series.Points.DataBindXY(x, y);
+            series.ChartType = SeriesChartType.Spline;
+            series.MarkerStyle = MarkerStyle.Circle;
+            series.MarkerSize = 0;
+            series.BorderWidth = 3;
+
+            OverviewTab_Chart.Series.Add(series);
+            OverviewTab_Chart.ResetAutoValues();
+
+            OverviewTab_Chart.ChartAreas[0].AxisX.Minimum = 1;
+            OverviewTab_Chart.ChartAreas[0].AxisX.Maximum = 7;
+            OverviewTab_Chart.ChartAreas[0].AxisX.Title = "Day";
+            OverviewTab_Chart.ChartAreas[0].AxisX.TitleForeColor = Color.LightGray;
+            OverviewTab_Chart.ChartAreas[0].AxisY.Title = "Portfolio value";
+            OverviewTab_Chart.ChartAreas[0].AxisY.TitleForeColor = Color.LightGray;
             int currency = Properties.Settings.Default.base_currency;
             RecalculateEquity(currency, value, OverviewTab_EquityValueLabel);
-
         }
+        
         public static void RecalculateEquity(int currency, double value, Label label)
         {
             if (currency == 2)
@@ -102,14 +126,14 @@ namespace investiciju_portfolio
             {
                 string selectedSymbol = StockListView.SelectedItems[0].Text;
 
-                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversable.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversible.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     bool deleted = StockHandler.DeleteStock(selectedSymbol, Properties.Settings.Default.id);
                     if (deleted)
                     {
                         StockListView.Items.Remove(StockListView.SelectedItems[0]);
                         RecalculateStockCount();
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
 
                         MessageBox.Show("Instrument deleted successfully.");
                     }
@@ -144,16 +168,16 @@ namespace investiciju_portfolio
                         bool createdStock = StockHandler.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
                         if (createdStock)
                         {
-                            StockAPI stockAPI = new StockAPI();
-                            double RealPrice = stockAPI.getPrice(Ticker, 0);
+                            double RealPrice = StockAPI.GetPrice(Ticker, 0);
                             listViewItem.SubItems.Add(Math.Round(RealPrice, 3).ToString());
+                            listViewItem.ForeColor = Color.White;
                             StockListView.Items.Add(listViewItem);
 
                             OverviewTab_TickerTextBox.Text = string.Empty;
                             OverviewTab_CountTextBox.Text = string.Empty;
                             OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
-                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
                             MessageBox.Show(Ticker + " stock successfully added.");
                             RecalculateStockCount();
                         }
@@ -168,7 +192,6 @@ namespace investiciju_portfolio
 
                 if (EditIsClicked)
                 {
-
                     bool editedStock = StockHandler.EditStock(Count, AvgPrice, Ticker);
                     if (editedStock)
                     {
@@ -177,7 +200,7 @@ namespace investiciju_portfolio
                         OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
                         MessageBox.Show(Ticker + " stock successfully edited.");
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
                     }
                     else
                     {
@@ -185,6 +208,11 @@ namespace investiciju_portfolio
                     }
                 }
             }
+        }
+
+        private void OverviewTab_Chart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,16 +29,12 @@ namespace investiciju_portfolio
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.StockPricePanel = new System.Windows.Forms.Panel();
             this.OverviewTab_InstrumentActionPanel = new System.Windows.Forms.Panel();
             this.OverviewTab_ConfirmButton = new System.Windows.Forms.Button();
-            this.OverviewTab_AvgPriceTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
-            this.OverviewTab_CountTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
-            this.OverviewTab_TickerTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
             this.StockListView = new System.Windows.Forms.ListView();
             this.StockName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StockPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,6 +55,9 @@ namespace investiciju_portfolio
             this.OverviewTab_EditButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.OverviewTab_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.OverviewTab_AvgPriceTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
+            this.OverviewTab_CountTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
+            this.OverviewTab_TickerTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
             this.StockPricePanel.SuspendLayout();
             this.OverviewTab_InstrumentActionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,48 +106,6 @@ namespace investiciju_portfolio
             this.OverviewTab_ConfirmButton.Text = "Confirm";
             this.OverviewTab_ConfirmButton.UseVisualStyleBackColor = false;
             this.OverviewTab_ConfirmButton.Click += new System.EventHandler(this.OverviewTab_ConfirmButton_Click);
-            // 
-            // OverviewTab_AvgPriceTextBox
-            // 
-            this.OverviewTab_AvgPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.OverviewTab_AvgPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OverviewTab_AvgPriceTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_AvgPriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.OverviewTab_AvgPriceTextBox.Hint = "Avg. Price";
-            this.OverviewTab_AvgPriceTextBox.Location = new System.Drawing.Point(210, 7);
-            this.OverviewTab_AvgPriceTextBox.MaxLength = 64;
-            this.OverviewTab_AvgPriceTextBox.Name = "OverviewTab_AvgPriceTextBox";
-            this.OverviewTab_AvgPriceTextBox.Size = new System.Drawing.Size(100, 21);
-            this.OverviewTab_AvgPriceTextBox.TabIndex = 15;
-            this.OverviewTab_AvgPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // OverviewTab_CountTextBox
-            // 
-            this.OverviewTab_CountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.OverviewTab_CountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OverviewTab_CountTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_CountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.OverviewTab_CountTextBox.Hint = "Count";
-            this.OverviewTab_CountTextBox.Location = new System.Drawing.Point(105, 7);
-            this.OverviewTab_CountTextBox.MaxLength = 64;
-            this.OverviewTab_CountTextBox.Name = "OverviewTab_CountTextBox";
-            this.OverviewTab_CountTextBox.Size = new System.Drawing.Size(100, 21);
-            this.OverviewTab_CountTextBox.TabIndex = 14;
-            this.OverviewTab_CountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // OverviewTab_TickerTextBox
-            // 
-            this.OverviewTab_TickerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.OverviewTab_TickerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OverviewTab_TickerTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewTab_TickerTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.OverviewTab_TickerTextBox.Hint = "Ticker";
-            this.OverviewTab_TickerTextBox.Location = new System.Drawing.Point(0, 7);
-            this.OverviewTab_TickerTextBox.MaxLength = 64;
-            this.OverviewTab_TickerTextBox.Name = "OverviewTab_TickerTextBox";
-            this.OverviewTab_TickerTextBox.Size = new System.Drawing.Size(100, 21);
-            this.OverviewTab_TickerTextBox.TabIndex = 13;
-            this.OverviewTab_TickerTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StockListView
             // 
@@ -314,7 +271,7 @@ namespace investiciju_portfolio
             this.OverviewTab_StockCountValueLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.OverviewTab_StockCountValueLabel.Size = new System.Drawing.Size(350, 43);
             this.OverviewTab_StockCountValueLabel.TabIndex = 1;
-            this.OverviewTab_StockCountValueLabel.Text = "5";
+            this.OverviewTab_StockCountValueLabel.Text = "0";
             this.OverviewTab_StockCountValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OverviewTab_CreateButton
@@ -388,49 +345,81 @@ namespace investiciju_portfolio
             this.OverviewTab_Chart.BorderlineWidth = 0;
             this.OverviewTab_Chart.BorderSkin.BorderWidth = 0;
             this.OverviewTab_Chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            chartArea6.AxisX.IsLabelAutoFit = false;
-            chartArea6.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea6.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisY.IsLabelAutoFit = false;
-            chartArea6.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea6.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
-            chartArea6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            chartArea6.Name = "ChartArea1";
-            this.OverviewTab_Chart.ChartAreas.Add(chartArea6);
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            chartArea1.Name = "ChartArea1";
+            this.OverviewTab_Chart.ChartAreas.Add(chartArea1);
             this.OverviewTab_Chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Enabled = false;
-            legend6.Name = "Legend1";
-            this.OverviewTab_Chart.Legends.Add(legend6);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.OverviewTab_Chart.Legends.Add(legend1);
             this.OverviewTab_Chart.Location = new System.Drawing.Point(0, 0);
             this.OverviewTab_Chart.Name = "OverviewTab_Chart";
             this.OverviewTab_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.OverviewTab_Chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))))};
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            series6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series6.LabelBackColor = System.Drawing.Color.White;
-            series6.LabelForeColor = System.Drawing.Color.White;
-            series6.Legend = "Legend1";
-            series6.MarkerColor = System.Drawing.Color.White;
-            series6.Name = "Series1";
-            this.OverviewTab_Chart.Series.Add(series6);
             this.OverviewTab_Chart.Size = new System.Drawing.Size(1062, 401);
             this.OverviewTab_Chart.TabIndex = 0;
-            this.OverviewTab_Chart.Text = "testestest";
-            title6.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.ForeColor = System.Drawing.Color.LightGray;
-            title6.Name = "OverviewTab_ChartTitle";
-            title6.Text = "TEST";
-            this.OverviewTab_Chart.Titles.Add(title6);
+            title1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.LightGray;
+            title1.Name = "OverviewTab_ChartTitle";
+            title1.Text = "Portfolio Performance";
+            this.OverviewTab_Chart.Titles.Add(title1);
+            this.OverviewTab_Chart.Click += new System.EventHandler(this.OverviewTab_Chart_Click);
+            // 
+            // OverviewTab_AvgPriceTextBox
+            // 
+            this.OverviewTab_AvgPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_AvgPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_AvgPriceTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_AvgPriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_AvgPriceTextBox.Hint = "Avg. Price";
+            this.OverviewTab_AvgPriceTextBox.Location = new System.Drawing.Point(210, 7);
+            this.OverviewTab_AvgPriceTextBox.MaxLength = 64;
+            this.OverviewTab_AvgPriceTextBox.Name = "OverviewTab_AvgPriceTextBox";
+            this.OverviewTab_AvgPriceTextBox.Size = new System.Drawing.Size(100, 17);
+            this.OverviewTab_AvgPriceTextBox.TabIndex = 15;
+            this.OverviewTab_AvgPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OverviewTab_CountTextBox
+            // 
+            this.OverviewTab_CountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_CountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_CountTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_CountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_CountTextBox.Hint = "Count";
+            this.OverviewTab_CountTextBox.Location = new System.Drawing.Point(105, 7);
+            this.OverviewTab_CountTextBox.MaxLength = 64;
+            this.OverviewTab_CountTextBox.Name = "OverviewTab_CountTextBox";
+            this.OverviewTab_CountTextBox.Size = new System.Drawing.Size(100, 17);
+            this.OverviewTab_CountTextBox.TabIndex = 14;
+            this.OverviewTab_CountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OverviewTab_TickerTextBox
+            // 
+            this.OverviewTab_TickerTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            this.OverviewTab_TickerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OverviewTab_TickerTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewTab_TickerTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
+            this.OverviewTab_TickerTextBox.Hint = "Ticker";
+            this.OverviewTab_TickerTextBox.Location = new System.Drawing.Point(0, 7);
+            this.OverviewTab_TickerTextBox.MaxLength = 64;
+            this.OverviewTab_TickerTextBox.Name = "OverviewTab_TickerTextBox";
+            this.OverviewTab_TickerTextBox.Size = new System.Drawing.Size(100, 17);
+            this.OverviewTab_TickerTextBox.TabIndex = 13;
+            this.OverviewTab_TickerTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // OverviewTab
             // 
