@@ -63,8 +63,19 @@ namespace investiciju_portfolio
         {
             string Ticker = OverviewTab_TickerTextBox.Text;
             double Count = Convert.ToDouble(OverviewTab_CountTextBox.Text);
-            double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox);
+            double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox.Text);
 
+            ListViewItem listViewItem = new ListViewItem(Ticker);
+
+            if (CreateIsClicked)
+            {
+                listViewItem.Text = Ticker;
+                
+                StockAPI stockAPI = new StockAPI();
+                double RealPrice = stockAPI.getPrice(Ticker, 0);
+                listViewItem.SubItems.Add(RealPrice.ToString()); 
+                StockListView.Items.Add(listViewItem);
+            }
         }
     }
 }
