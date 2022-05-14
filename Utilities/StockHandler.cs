@@ -12,6 +12,60 @@ namespace investiciju_portfolio.Utilities
     static internal class StockHandler
     {
         /// <summary>
+        /// Creates a new stock.
+        /// </summary>
+        /// <param name="ticker">stock name</param>
+        /// <param name="count">stock purchased amount</param>
+        /// <param name="purchasePrice">avg stock price when purchased</param>
+        /// <param name="fkUser">user id who purchased the stock</param>
+        /// <returns></returns>
+        public static bool AddStock(string ticker, double count, double purchasePrice, int fkUser)
+        {
+            try
+            {
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("INSERT INTO instruments (ticker, count, purchase_price, fk_user) VALUES (@ticker, @count, @purchase_price, @fk_user)"));
+                command.Parameters.AddWithValue("@ticker", ticker);
+                command.Parameters.AddWithValue("@count", count);
+                command.Parameters.AddWithValue("@purchase_price", purchasePrice);
+                command.Parameters.AddWithValue("@fk_user", fkUser);
+                dbConnection.ExecuteCommand(command);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified user's stock from the database.
+        /// </summary>
+        /// <param name="ticker">Instrument ticker</param>
+        /// <param name="fkUser">User ID</param>
+        /// <returns></returns>
+        public static bool DeleteStock(string ticker, int fkUser)
+        {
+            try
+            {
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                MySqlCommand command = new MySqlCommand(String.Format("DELETE FROM instruments WHERE ticker=@ticker AND fk_user=@fk_user"));
+                command.Parameters.AddWithValue("@ticker", ticker);
+                command.Parameters.AddWithValue("@fk_user", fkUser);
+                dbConnection.ExecuteCommand(command);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
+
+        /// <summary>
         /// Changes stock average price and/or the amount
         /// </summary>
         /// <param name="count">the amount of the stock</param>

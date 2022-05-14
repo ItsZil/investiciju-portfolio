@@ -227,7 +227,6 @@
     <Compile Include="Classes\FlatComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\Creation.cs" />
     <Compile Include="Classes\WatermarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
