@@ -26,6 +26,8 @@ namespace investiciju_portfolio
         private void OverviewTab_Load(object sender, EventArgs e)
         {
             OverviewTab_InstrumentActionPanel.SendToBack();
+            RecalculateStockCount();
+
             double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
             {
@@ -41,6 +43,7 @@ namespace investiciju_portfolio
                         listViewItem.Text = dr["ticker"].ToString();
                         double RealPrice = StockAPI.GetPrice(dr["ticker"].ToString(), 0);
                         listViewItem.SubItems.Add(RealPrice.ToString());
+                        listViewItem.ForeColor = Color.White;
                         StockListView.Items.Add(listViewItem);
                         value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
@@ -111,7 +114,7 @@ namespace investiciju_portfolio
             {
                 string selectedSymbol = StockListView.SelectedItems[0].Text;
 
-                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversable.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversable.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     bool deleted = StockHandler.DeleteStock(selectedSymbol, Properties.Settings.Default.id);
                     if (deleted)
@@ -155,6 +158,7 @@ namespace investiciju_portfolio
                         {
                             double RealPrice = StockAPI.GetPrice(Ticker, 0);
                             listViewItem.SubItems.Add(Math.Round(RealPrice, 3).ToString());
+                            listViewItem.ForeColor = Color.White;
                             StockListView.Items.Add(listViewItem);
 
                             OverviewTab_TickerTextBox.Text = string.Empty;
