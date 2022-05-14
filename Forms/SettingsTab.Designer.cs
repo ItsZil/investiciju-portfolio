@@ -103,6 +103,7 @@ namespace investiciju_portfolio
             this.SettingsTab_SavePWButton.TabIndex = 14;
             this.SettingsTab_SavePWButton.Text = "Save ";
             this.SettingsTab_SavePWButton.UseVisualStyleBackColor = false;
+            this.SettingsTab_SavePWButton.Click += new System.EventHandler(this.SettingsTab_SavePWButton_Click);
             // 
             // SettingsTab_ConfirmNewPWTextBox
             // 

@@ -34,7 +34,7 @@ namespace investiciju_portfolio.Classes
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -67,7 +67,7 @@ namespace investiciju_portfolio.Classes
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
