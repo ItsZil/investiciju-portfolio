@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
 
 namespace investiciju_portfolio
 {
@@ -24,6 +25,27 @@ namespace investiciju_portfolio
         private void OverviewTab_Load(object sender, EventArgs e)
         {
             OverviewTab_InstrumentActionPanel.SendToBack();
+
+            using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
+            {
+                MySqlDataReader dr;
+                conn.Open();
+                using (var cmd = new MySqlCommand("SELECT * FROM instruments where fk_user='" + Properties.Settings.Default.id + "'", conn))
+                {
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        ListViewItem listViewItem = new ListViewItem(dr["ticker"].ToString());
+                        listViewItem.Text = dr["ticker"].ToString();
+                        StockAPI stockAPI = new StockAPI();
+                        double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
+                        listViewItem.SubItems.Add(RealPrice.ToString());
+                        StockListView.Items.Add(listViewItem);
+                    }
+                   
+                }
+            }
+
         }
 
         private void OverviewTab_CreateButton_Click(object sender, EventArgs e)
@@ -78,9 +100,10 @@ namespace investiciju_portfolio
 
 
                     bool stockExists = StockHandler.stockExists(Ticker);
-                    bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
+                    
                     if (!stockExists)
                     {
+                        bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
                         if (createdStock)
                         {
                             StockAPI stockAPI = new StockAPI();
