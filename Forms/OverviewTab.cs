@@ -54,7 +54,7 @@ namespace investiciju_portfolio
 
             Series series = new Series();
             int[] x = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            double[] y = ChartHandler.GetTotalValues();
+            double[] y = EquityHandler.CountValue(7);
 
             series.Points.DataBindXY(x, y);
             series.ChartType = SeriesChartType.Spline;
