@@ -25,13 +25,14 @@ namespace investiciju_portfolio
         private void OverviewTab_Load(object sender, EventArgs e)
         {
             OverviewTab_InstrumentActionPanel.SendToBack();
-
+            double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
             {
                 MySqlDataReader dr;
                 conn.Open();
                 using (var cmd = new MySqlCommand("SELECT * FROM instruments where fk_user='" + Properties.Settings.Default.id + "'", conn))
                 {
+                    
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -41,11 +42,13 @@ namespace investiciju_portfolio
                         double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
                         listViewItem.SubItems.Add(RealPrice.ToString());
                         StockListView.Items.Add(listViewItem);
+                        value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
                    
                 }
             }
-            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+
+            OverviewTab_EquityValueLabel.Text = Math.Round(value, 3).ToString();
 
 
 
@@ -118,6 +121,7 @@ namespace investiciju_portfolio
                             OverviewTab_CountTextBox.Text = string.Empty;
                             OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
+                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
                             MessageBox.Show(Ticker + " stock successfully added.");
                         }
                         else
@@ -140,6 +144,7 @@ namespace investiciju_portfolio
                         OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
                         MessageBox.Show(Ticker + " stock successfully edited.");
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
                     }
                     else
                     {

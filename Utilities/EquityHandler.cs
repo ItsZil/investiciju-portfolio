@@ -3,6 +3,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using Microsoft.AspNet.Identity;
 using MySqlConnector;
+using System.Windows.Forms;
 
 namespace investiciju_portfolio.Utilities
 {
@@ -35,6 +36,8 @@ namespace investiciju_portfolio.Utilities
 
                 }
             }
+            
+
         }
         
     }
