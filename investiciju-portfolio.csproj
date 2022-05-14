@@ -233,6 +233,7 @@
     <Compile Include="Classes\FlatComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\Creation.cs" />
     <Compile Include="Classes\WatermarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -270,6 +271,7 @@
       <DependentUpon>SettingsTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\DatabaseConnection.cs" />
+    <Compile Include="Utilities\StockHandler.cs" />
     <Compile Include="Utilities\PasswordHandler.cs" />
     <Compile Include="Utilities\SettingsHandler.cs" />
     <Compile Include="Utilities\StockAPI.cs" />

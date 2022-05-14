@@ -1,4 +1,6 @@
-﻿using System;
+﻿using investiciju_portfolio.Classes;
+using investiciju_portfolio.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,10 +73,49 @@ namespace investiciju_portfolio
             {
                 listViewItem.Text = Ticker;
                 
-                StockAPI stockAPI = new StockAPI();
-                double RealPrice = stockAPI.getPrice(Ticker, 0);
-                listViewItem.SubItems.Add(RealPrice.ToString()); 
-                StockListView.Items.Add(listViewItem);
+                
+                bool stockExists = StockHandler.stockExists(Ticker);
+                bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
+                if (!stockExists)
+                {
+                    if (createdStock)
+                    {
+                        StockAPI stockAPI = new StockAPI();
+                        double RealPrice = stockAPI.getPrice(Ticker, 0);
+                        listViewItem.SubItems.Add(RealPrice.ToString());
+                        StockListView.Items.Add(listViewItem);
+
+                        OverviewTab_TickerTextBox.Text = string.Empty;
+                        OverviewTab_CountTextBox.Text = string.Empty;
+                        OverviewTab_AvgPriceTextBox.Text = string.Empty;
+
+                        MessageBox.Show(Ticker + " stock successfully added.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add " + Ticker + " stock.");
+                    }
+                }
+                else
+                    MessageBox.Show(Ticker + " stock already exists.");
+            }
+
+            if (EditIsClicked)
+            {
+                
+                bool editedStock = StockHandler.EditStock(Count, AvgPrice, Ticker);
+                if (editedStock)
+                {
+                    OverviewTab_TickerTextBox.Text = string.Empty;
+                    OverviewTab_CountTextBox.Text = string.Empty;
+                    OverviewTab_AvgPriceTextBox.Text = string.Empty;
+
+                    MessageBox.Show(Ticker + " stock successfully edited.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to edit " + Ticker + " stock.");
+                }
             }
         }
     }
