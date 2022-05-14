@@ -13,10 +13,10 @@ namespace investiciju_portfolio.Utilities
     static internal class EquityHandler
     {
         /// <summary>
-        /// Changes stock average price and/or the amount
+        /// Calculates the total value of the user's instruments.
         /// </summary>
         /// <returns></returns>
-        public static double countValue()
+        public static double CountValue()
         {
             double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))

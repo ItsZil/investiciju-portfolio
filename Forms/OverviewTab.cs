@@ -26,7 +26,6 @@ namespace investiciju_portfolio
         private void OverviewTab_Load(object sender, EventArgs e)
         {
             OverviewTab_InstrumentActionPanel.SendToBack();
-            RecalculateStockCount();
 
             double value = 0;
             using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
@@ -50,6 +49,7 @@ namespace investiciju_portfolio
 
                 }
             }
+            RecalculateStockCount();
             OverviewTab_EquityValueLabel.Text = Math.Round(value, 3).ToString();
 
             Series series = new Series();
@@ -121,7 +121,7 @@ namespace investiciju_portfolio
                     {
                         StockListView.Items.Remove(StockListView.SelectedItems[0]);
                         RecalculateStockCount();
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
 
                         MessageBox.Show("Instrument deleted successfully.");
                     }
@@ -165,7 +165,7 @@ namespace investiciju_portfolio
                             OverviewTab_CountTextBox.Text = string.Empty;
                             OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
-                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
                             MessageBox.Show(Ticker + " stock successfully added.");
                             RecalculateStockCount();
                         }
@@ -180,7 +180,6 @@ namespace investiciju_portfolio
 
                 if (EditIsClicked)
                 {
-
                     bool editedStock = StockHandler.EditStock(Count, AvgPrice, Ticker);
                     if (editedStock)
                     {
@@ -189,7 +188,7 @@ namespace investiciju_portfolio
                         OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
                         MessageBox.Show(Ticker + " stock successfully edited.");
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
                     }
                     else
                     {
