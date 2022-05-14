@@ -47,11 +47,12 @@ namespace investiciju_portfolio
                    
                 }
             }
-
             OverviewTab_EquityValueLabel.Text = Math.Round(value, 3).ToString();
+        }
 
-
-
+        private void RecalculateStockCount()
+        {
+            OverviewTab_StockCountValueLabel.Text = StockListView.Items.Count.ToString();
         }
 
         private void OverviewTab_CreateButton_Click(object sender, EventArgs e)
@@ -86,7 +87,27 @@ namespace investiciju_portfolio
 
         private void OverviewTab_RemoveButton_Click(object sender, EventArgs e)
         {
+            if (StockListView.SelectedItems[0].Text != null)
+            {
+                string selectedSymbol = StockListView.SelectedItems[0].Text;
 
+                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversable.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    bool deleted = StockHandler.DeleteStock(selectedSymbol, Properties.Settings.Default.id);
+                    if (deleted)
+                    {
+                        StockListView.Items.Remove(StockListView.SelectedItems[0]);
+                        RecalculateStockCount();
+                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+
+                        MessageBox.Show("Instrument deleted successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete instrument.");
+                    }
+                }
+            }
         }
 
         private void OverviewTab_ConfirmButton_Click(object sender, EventArgs e)
@@ -109,7 +130,7 @@ namespace investiciju_portfolio
                     
                     if (!stockExists)
                     {
-                        bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
+                        bool createdStock = StockHandler.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
                         if (createdStock)
                         {
                             StockAPI stockAPI = new StockAPI();
@@ -123,6 +144,7 @@ namespace investiciju_portfolio
 
                             OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
                             MessageBox.Show(Ticker + " stock successfully added.");
+                            RecalculateStockCount();
                         }
                         else
                         {
