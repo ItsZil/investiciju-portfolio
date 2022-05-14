@@ -71,6 +71,18 @@ namespace investiciju_portfolio
             OverviewTab_Chart.ChartAreas[0].AxisX.TitleForeColor = Color.LightGray;
             OverviewTab_Chart.ChartAreas[0].AxisY.Title = "Portfolio value";
             OverviewTab_Chart.ChartAreas[0].AxisY.TitleForeColor = Color.LightGray;
+            int currency = Properties.Settings.Default.base_currency;
+            RecalculateEquity(currency, value, OverviewTab_EquityValueLabel);
+        }
+        
+        public static void RecalculateEquity(int currency, double value, Label label)
+        {
+            if (currency == 2)
+                label.Text = "$" + Math.Round(value, 3).ToString();
+            else if (currency == 0)
+                label.Text = Math.Round(value * 0.96, 3).ToString() + "€";
+            else if (currency == 1)
+                label.Text = "£" + Math.Round(value * 0.82, 3).ToString();
         }
 
         private void RecalculateStockCount()
