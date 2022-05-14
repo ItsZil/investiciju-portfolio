@@ -40,7 +40,7 @@ namespace investiciju_portfolio
         /// <param name="stock"> stock's ticker </param>
         /// <param name="rowsInd"> number of days passed from today (Assumption) </param>
         /// <returns></returns>
-        public static double getPrice(string stock, int rowsInd)
+        public static double GetPrice(string stock, int rowsInd)
         {
             SaveCSVFromURL(stock);
 

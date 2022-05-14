@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace investiciju_portfolio
 {
@@ -32,25 +33,42 @@ namespace investiciju_portfolio
                 conn.Open();
                 using (var cmd = new MySqlCommand("SELECT * FROM instruments where fk_user='" + Properties.Settings.Default.id + "'", conn))
                 {
-                    
+
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
                         ListViewItem listViewItem = new ListViewItem(dr["ticker"].ToString());
                         listViewItem.Text = dr["ticker"].ToString();
-                        StockAPI stockAPI = new StockAPI();
-                        double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
+                        double RealPrice = StockAPI.GetPrice(dr["ticker"].ToString(), 0);
                         listViewItem.SubItems.Add(RealPrice.ToString());
                         StockListView.Items.Add(listViewItem);
                         value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
-                   
+
                 }
             }
 
             OverviewTab_EquityValueLabel.Text = Math.Round(value, 3).ToString();
 
+            Series series = new Series();
+            int[] x = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            double[] y = ChartHandler.GetTotalValues();
 
+            series.Points.DataBindXY(x, y);
+            series.ChartType = SeriesChartType.Spline;
+            series.MarkerStyle = MarkerStyle.Circle;
+            series.MarkerSize = 0;
+            series.BorderWidth = 3;
+
+            OverviewTab_Chart.Series.Add(series);
+
+            OverviewTab_Chart.ResetAutoValues();
+            OverviewTab_Chart.ChartAreas[0].AxisX.Minimum = 1;
+            OverviewTab_Chart.ChartAreas[0].AxisX.Maximum = 7;
+            OverviewTab_Chart.ChartAreas[0].AxisX.Title = "Day";
+            OverviewTab_Chart.ChartAreas[0].AxisX.TitleForeColor = Color.LightGray;
+            OverviewTab_Chart.ChartAreas[0].AxisY.Title = "Portfolio value";
+            OverviewTab_Chart.ChartAreas[0].AxisY.TitleForeColor = Color.LightGray;
 
         }
 
@@ -112,8 +130,7 @@ namespace investiciju_portfolio
                         bool createdStock = Creation.AddStock(Ticker, Count, AvgPrice, Properties.Settings.Default.id);
                         if (createdStock)
                         {
-                            StockAPI stockAPI = new StockAPI();
-                            double RealPrice = stockAPI.getPrice(Ticker, 0);
+                            double RealPrice = StockAPI.GetPrice(Ticker, 0);
                             listViewItem.SubItems.Add(Math.Round(RealPrice, 3).ToString());
                             StockListView.Items.Add(listViewItem);
 
@@ -152,6 +169,11 @@ namespace investiciju_portfolio
                     }
                 }
             }
+        }
+
+        private void OverviewTab_Chart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
