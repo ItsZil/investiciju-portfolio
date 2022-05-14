@@ -28,8 +28,7 @@ namespace investiciju_portfolio.Utilities
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        StockAPI stockAPI = new StockAPI();
-                        double RealPrice = stockAPI.getPrice(dr["ticker"].ToString(), 0);
+                        double RealPrice = StockAPI.GetPrice(dr["ticker"].ToString(), 0);
                         value += RealPrice * Int32.Parse(dr["count"].ToString());
                     }
                     return value;
