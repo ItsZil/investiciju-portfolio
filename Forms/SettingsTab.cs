@@ -18,6 +18,8 @@ namespace investiciju_portfolio
             InitializeComponent();
         }
 
+        
+
         private void SettingsTab_Load(object sender, EventArgs e)
         {
             SettingsTab_UsernameDisplayLabel.Text = SettingsHandler.GetUsername();
