@@ -29,13 +29,12 @@ namespace investiciju_portfolio
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.StockPricePanel = new System.Windows.Forms.Panel();
             this.OverviewTab_InstrumentActionPanel = new System.Windows.Forms.Panel();
-            this.Overviewtab_InstrumentsActionPanel_CloseButton = new System.Windows.Forms.Button();
             this.OverviewTab_ConfirmButton = new System.Windows.Forms.Button();
             this.OverviewTab_AvgPriceTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
             this.OverviewTab_CountTextBox = new investiciju_portfolio.Classes.WatermarkTextBox();
@@ -84,30 +83,15 @@ namespace investiciju_portfolio
             // 
             // OverviewTab_InstrumentActionPanel
             // 
-            this.OverviewTab_InstrumentActionPanel.Controls.Add(this.Overviewtab_InstrumentsActionPanel_CloseButton);
+            this.OverviewTab_InstrumentActionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_ConfirmButton);
             this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_AvgPriceTextBox);
             this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_CountTextBox);
             this.OverviewTab_InstrumentActionPanel.Controls.Add(this.OverviewTab_TickerTextBox);
-            this.OverviewTab_InstrumentActionPanel.Location = new System.Drawing.Point(0, 441);
+            this.OverviewTab_InstrumentActionPanel.Location = new System.Drawing.Point(0, 463);
             this.OverviewTab_InstrumentActionPanel.Name = "OverviewTab_InstrumentActionPanel";
-            this.OverviewTab_InstrumentActionPanel.Size = new System.Drawing.Size(310, 102);
+            this.OverviewTab_InstrumentActionPanel.Size = new System.Drawing.Size(310, 80);
             this.OverviewTab_InstrumentActionPanel.TabIndex = 1;
-            // 
-            // Overviewtab_InstrumentsActionPanel_CloseButton
-            // 
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.FlatAppearance.BorderSize = 0;
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Image = global::investiciju_portfolio.Properties.Resources.close15px;
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Location = new System.Drawing.Point(291, 0);
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Name = "Overviewtab_InstrumentsActionPanel_CloseButton";
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Size = new System.Drawing.Size(20, 20);
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.TabIndex = 17;
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.UseVisualStyleBackColor = false;
-            this.Overviewtab_InstrumentsActionPanel_CloseButton.Click += new System.EventHandler(this.Overviewtab_InstrumentsActionPanel_CloseButton_Click);
             // 
             // OverviewTab_ConfirmButton
             // 
@@ -116,7 +100,7 @@ namespace investiciju_portfolio
             this.OverviewTab_ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OverviewTab_ConfirmButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverviewTab_ConfirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
-            this.OverviewTab_ConfirmButton.Location = new System.Drawing.Point(210, 74);
+            this.OverviewTab_ConfirmButton.Location = new System.Drawing.Point(210, 55);
             this.OverviewTab_ConfirmButton.Name = "OverviewTab_ConfirmButton";
             this.OverviewTab_ConfirmButton.Size = new System.Drawing.Size(97, 25);
             this.OverviewTab_ConfirmButton.TabIndex = 16;
@@ -131,7 +115,7 @@ namespace investiciju_portfolio
             this.OverviewTab_AvgPriceTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverviewTab_AvgPriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.OverviewTab_AvgPriceTextBox.Hint = "Avg. Price";
-            this.OverviewTab_AvgPriceTextBox.Location = new System.Drawing.Point(210, 28);
+            this.OverviewTab_AvgPriceTextBox.Location = new System.Drawing.Point(210, 7);
             this.OverviewTab_AvgPriceTextBox.MaxLength = 64;
             this.OverviewTab_AvgPriceTextBox.Name = "OverviewTab_AvgPriceTextBox";
             this.OverviewTab_AvgPriceTextBox.Size = new System.Drawing.Size(100, 21);
@@ -145,7 +129,7 @@ namespace investiciju_portfolio
             this.OverviewTab_CountTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverviewTab_CountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.OverviewTab_CountTextBox.Hint = "Count";
-            this.OverviewTab_CountTextBox.Location = new System.Drawing.Point(105, 28);
+            this.OverviewTab_CountTextBox.Location = new System.Drawing.Point(105, 7);
             this.OverviewTab_CountTextBox.MaxLength = 64;
             this.OverviewTab_CountTextBox.Name = "OverviewTab_CountTextBox";
             this.OverviewTab_CountTextBox.Size = new System.Drawing.Size(100, 21);
@@ -159,7 +143,7 @@ namespace investiciju_portfolio
             this.OverviewTab_TickerTextBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverviewTab_TickerTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(56)))));
             this.OverviewTab_TickerTextBox.Hint = "Ticker";
-            this.OverviewTab_TickerTextBox.Location = new System.Drawing.Point(0, 28);
+            this.OverviewTab_TickerTextBox.Location = new System.Drawing.Point(0, 7);
             this.OverviewTab_TickerTextBox.MaxLength = 64;
             this.OverviewTab_TickerTextBox.Name = "OverviewTab_TickerTextBox";
             this.OverviewTab_TickerTextBox.Size = new System.Drawing.Size(100, 21);
@@ -404,49 +388,49 @@ namespace investiciju_portfolio
             this.OverviewTab_Chart.BorderlineWidth = 0;
             this.OverviewTab_Chart.BorderSkin.BorderWidth = 0;
             this.OverviewTab_Chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
-            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
-            chartArea1.Name = "ChartArea1";
-            this.OverviewTab_Chart.ChartAreas.Add(chartArea1);
+            chartArea6.AxisX.IsLabelAutoFit = false;
+            chartArea6.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.IsLabelAutoFit = false;
+            chartArea6.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            chartArea6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(57)))), ((int)(((byte)(59)))));
+            chartArea6.Name = "ChartArea1";
+            this.OverviewTab_Chart.ChartAreas.Add(chartArea6);
             this.OverviewTab_Chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.OverviewTab_Chart.Legends.Add(legend1);
+            legend6.Enabled = false;
+            legend6.Name = "Legend1";
+            this.OverviewTab_Chart.Legends.Add(legend6);
             this.OverviewTab_Chart.Location = new System.Drawing.Point(0, 0);
             this.OverviewTab_Chart.Name = "OverviewTab_Chart";
             this.OverviewTab_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.OverviewTab_Chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            series1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelBackColor = System.Drawing.Color.White;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.Color.White;
-            series1.Name = "Series1";
-            this.OverviewTab_Chart.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
+            series6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.LabelBackColor = System.Drawing.Color.White;
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.MarkerColor = System.Drawing.Color.White;
+            series6.Name = "Series1";
+            this.OverviewTab_Chart.Series.Add(series6);
             this.OverviewTab_Chart.Size = new System.Drawing.Size(1062, 401);
             this.OverviewTab_Chart.TabIndex = 0;
             this.OverviewTab_Chart.Text = "testestest";
-            title1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.ForeColor = System.Drawing.Color.LightGray;
-            title1.Name = "OverviewTab_ChartTitle";
-            title1.Text = "TEST";
-            this.OverviewTab_Chart.Titles.Add(title1);
+            title6.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.ForeColor = System.Drawing.Color.LightGray;
+            title6.Name = "OverviewTab_ChartTitle";
+            title6.Text = "TEST";
+            this.OverviewTab_Chart.Titles.Add(title6);
             // 
             // OverviewTab
             // 
@@ -505,6 +489,5 @@ namespace investiciju_portfolio
         private Classes.WatermarkTextBox OverviewTab_CountTextBox;
         private Classes.WatermarkTextBox OverviewTab_TickerTextBox;
         private System.Windows.Forms.Button OverviewTab_ConfirmButton;
-        private System.Windows.Forms.Button Overviewtab_InstrumentsActionPanel_CloseButton;
     }
 }

@@ -66,10 +66,5 @@ namespace investiciju_portfolio
             double AvgPrice = Convert.ToDouble(OverviewTab_AvgPriceTextBox);
 
         }
-
-        private void Overviewtab_InstrumentsActionPanel_CloseButton_Click(object sender, EventArgs e)
-        {
-            OverviewTab_InstrumentActionPanel.SendToBack();
-        }
     }
 }
