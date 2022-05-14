@@ -263,7 +263,6 @@
     <Compile Include="Forms\SettingsTab.Designer.cs">
       <DependentUpon>SettingsTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\ChartHandler.cs" />
     <Compile Include="Utilities\DatabaseConnection.cs" />
     <Compile Include="Utilities\EquityHandler.cs" />
     <Compile Include="Utilities\StockHandler.cs" />

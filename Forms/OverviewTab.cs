@@ -40,7 +40,7 @@ namespace investiciju_portfolio
                     {
                         ListViewItem listViewItem = new ListViewItem(dr["ticker"].ToString());
                         listViewItem.Text = dr["ticker"].ToString();
-                        double RealPrice = StockAPI.GetPrice(dr["ticker"].ToString(), 0);
+                        double RealPrice = Math.Round(StockAPI.GetPrice(dr["ticker"].ToString(), 0), 3);
                         listViewItem.SubItems.Add(RealPrice.ToString());
                         listViewItem.ForeColor = Color.White;
                         StockListView.Items.Add(listViewItem);
@@ -63,8 +63,8 @@ namespace investiciju_portfolio
             series.BorderWidth = 3;
 
             OverviewTab_Chart.Series.Add(series);
-
             OverviewTab_Chart.ResetAutoValues();
+
             OverviewTab_Chart.ChartAreas[0].AxisX.Minimum = 1;
             OverviewTab_Chart.ChartAreas[0].AxisX.Maximum = 7;
             OverviewTab_Chart.ChartAreas[0].AxisX.Title = "Day";

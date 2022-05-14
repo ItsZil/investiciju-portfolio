@@ -15,7 +15,7 @@ namespace investiciju_portfolio.Utilities
         /// <summary>
         /// Calculates the total value of the user's instruments.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Total value</returns>
         public static double CountValue()
         {
             double value = 0;
@@ -38,10 +38,10 @@ namespace investiciju_portfolio.Utilities
         }
 
         /// <summary>
-        /// Calculates the total value of the user's instruments for today - days.
+        /// Calculates the total value of the user's instruments for n days
         /// </summary>
         /// <param name="days">Number of day to look back at</param>
-        /// <returns></returns>
+        /// <returns>Array of total values for n days</returns>
         public static double[] CountValue(int days)
         {
             double[] values = new double[] { 0, 0, 0, 0, 0, 0, 0 };
