@@ -114,7 +114,7 @@ namespace investiciju_portfolio
             {
                 string selectedSymbol = StockListView.SelectedItems[0].Text;
 
-                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversable.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete " + selectedSymbol + "?\nThis action is not reversible.", "Delete Instrument", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     bool deleted = StockHandler.DeleteStock(selectedSymbol, Properties.Settings.Default.id);
                     if (deleted)

@@ -52,5 +52,26 @@ namespace investiciju_portfolio
             double price = Convert.ToDouble(row[1]);
             return price;
         }
+
+        /// <summary>
+        /// Returns a double list of prices for multiple days.
+        /// </summary>
+        /// <param name="stock">The stock's ticker</param>
+        /// <param name="dayCount">Number of days</param>
+        /// <returns></returns>
+        public static double[] GetPrices(string stock, int dayCount)
+        {
+            double[] prices = new double[dayCount];
+            SaveCSVFromURL(stock);
+
+            DataFrame df = DataFrame.LoadCsv("stockdata.csv");
+            for (int i = 0; i < dayCount; i++)
+            {
+                DataFrameRow row = df.Rows[7 - i];
+                prices[i] = Convert.ToDouble(row[1]);
+            }
+            return prices;
+        }
+
     }
 }
