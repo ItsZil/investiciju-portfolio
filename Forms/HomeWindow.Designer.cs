@@ -35,8 +35,8 @@ namespace investiciju_portfolio
             this.HomeWindow_SettingsButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.settingsTab1 = new investiciju_portfolio.SettingsTab();
             this.overviewTab1 = new investiciju_portfolio.OverviewTab();
+            this.settingsTab1 = new investiciju_portfolio.SettingsTab();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_TextBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,16 +116,6 @@ namespace investiciju_portfolio
             this.panel2.Size = new System.Drawing.Size(1382, 576);
             this.panel2.TabIndex = 3;
             // 
-            // settingsTab1
-            // 
-            this.settingsTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
-            this.settingsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.settingsTab1.Location = new System.Drawing.Point(0, 0);
-            this.settingsTab1.Margin = new System.Windows.Forms.Padding(2);
-            this.settingsTab1.Name = "settingsTab1";
-            this.settingsTab1.Size = new System.Drawing.Size(1382, 576);
-            this.settingsTab1.TabIndex = 1;
-            // 
             // overviewTab1
             // 
             this.overviewTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
@@ -136,6 +126,16 @@ namespace investiciju_portfolio
             this.overviewTab1.Size = new System.Drawing.Size(1382, 576);
             this.overviewTab1.TabIndex = 0;
             this.overviewTab1.Load += new System.EventHandler(this.overviewTab1_Load);
+            // 
+            // settingsTab1
+            // 
+            this.settingsTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(68)))));
+            this.settingsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingsTab1.Location = new System.Drawing.Point(0, 0);
+            this.settingsTab1.Margin = new System.Windows.Forms.Padding(2);
+            this.settingsTab1.Name = "settingsTab1";
+            this.settingsTab1.Size = new System.Drawing.Size(1382, 576);
+            this.settingsTab1.TabIndex = 1;
             // 
             // HomeWindow
             // 

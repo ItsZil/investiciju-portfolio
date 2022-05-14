@@ -30,7 +30,6 @@ namespace investiciju_portfolio
         private void InitializeComponent()
         {
             this.RegistrationPanel = new System.Windows.Forms.Panel();
-            this.RegistrationForm_ReturnButton = new System.Windows.Forms.Button();
             this.RegistrationForm_TurnOffButton = new System.Windows.Forms.Button();
             this.Logo_TextBox = new System.Windows.Forms.PictureBox();
             this.RegistrationForm_HeaderLabel = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@ namespace investiciju_portfolio
             // RegistrationPanel
             // 
             this.RegistrationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.RegistrationPanel.Controls.Add(this.RegistrationForm_ReturnButton);
             this.RegistrationPanel.Controls.Add(this.RegistrationForm_TurnOffButton);
             this.RegistrationPanel.Controls.Add(this.Logo_TextBox);
             this.RegistrationPanel.Controls.Add(this.RegistrationForm_HeaderLabel);
@@ -57,18 +55,6 @@ namespace investiciju_portfolio
             this.RegistrationPanel.Name = "RegistrationPanel";
             this.RegistrationPanel.Size = new System.Drawing.Size(1382, 77);
             this.RegistrationPanel.TabIndex = 0;
-            // 
-            // RegistrationForm_ReturnButton
-            // 
-            this.RegistrationForm_ReturnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistrationForm_ReturnButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(67)))));
-            this.RegistrationForm_ReturnButton.Image = global::investiciju_portfolio.Properties.Resources.LeftArrow30px;
-            this.RegistrationForm_ReturnButton.Location = new System.Drawing.Point(1296, 0);
-            this.RegistrationForm_ReturnButton.Name = "RegistrationForm_ReturnButton";
-            this.RegistrationForm_ReturnButton.Size = new System.Drawing.Size(40, 40);
-            this.RegistrationForm_ReturnButton.TabIndex = 5;
-            this.RegistrationForm_ReturnButton.UseVisualStyleBackColor = true;
-            this.RegistrationForm_ReturnButton.Click += new System.EventHandler(this.RegistrationForm_ReturnButton_Click);
             // 
             // RegistrationForm_TurnOffButton
             // 
@@ -217,6 +203,5 @@ namespace investiciju_portfolio
         private Classes.WatermarkTextBox RegistrationForm_NameTextBox;
         private Classes.WatermarkTextBox RegistrationForm_PasswordTextBox;
         private Classes.WatermarkTextBox RegistrationForm_SurnameTextBox;
-        private System.Windows.Forms.Button RegistrationForm_ReturnButton;
     }
 }

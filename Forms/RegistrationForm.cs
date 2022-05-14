@@ -42,7 +42,6 @@ namespace investiciju_portfolio
             if(registrationState)
             {
                 MessageBox.Show("Registration was succesful.");
-                this.Close();
             }
         }
 
@@ -54,11 +53,6 @@ namespace investiciju_portfolio
         private void RegistrationForm_TurnOffButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void RegistrationForm_ReturnButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
