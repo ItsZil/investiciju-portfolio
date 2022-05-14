@@ -7,16 +7,16 @@ using MySqlConnector;
 namespace investiciju_portfolio.Utilities
 {
     /// <summary>
-    /// Static class containing methods to assist in hashing and unhashing passwords.
+    /// Static class containing methods to assist in editing and finding stocks
     /// </summary>
     static internal class StockHandler
     {
         /// <summary>
         /// Changes stock average price and/or the amount
         /// </summary>
-        /// <param name="count"></param>
-        /// <param name="purchasePrice"></param>
-        /// <param name="ticker"></param>
+        /// <param name="count">the amount of the stock</param>
+        /// <param name="purchasePrice">the average price that user paid for stock</param>
+        /// <param name="ticker">stock name</param>
         /// <returns></returns>
         public static bool EditStock(double count, double purchasePrice, string ticker)
         {
@@ -77,29 +77,6 @@ namespace investiciju_portfolio.Utilities
 
             
         }
-
-        /*public static bool stockCount(string userid)
-        {
-            using (var conn = new MySqlConnection("server=localhost;user=investiciju_portfolio;password=ipprojektas#;database=investiciju_portfolio"))
-            {
-                MySqlDataReader dr;
-                conn.Open();
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM instruments where fk_user='" + userid + "'", conn))
-                {
-                    dr = cmd.ExecuteReader();
-                    if (dr.Read())
-                    {
-                        
-                        
-                    }
-                    else
-                    {                 
-                        return false;
-                    }
-                }
-            }
-        } */
-
 
     }
 }
