@@ -45,6 +45,9 @@ namespace investiciju_portfolio
                    
                 }
             }
+            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.countValue(), 3).ToString();
+
+
 
         }
 
@@ -108,7 +111,7 @@ namespace investiciju_portfolio
                         {
                             StockAPI stockAPI = new StockAPI();
                             double RealPrice = stockAPI.getPrice(Ticker, 0);
-                            listViewItem.SubItems.Add(RealPrice.ToString());
+                            listViewItem.SubItems.Add(Math.Round(RealPrice, 3).ToString());
                             StockListView.Items.Add(listViewItem);
 
                             OverviewTab_TickerTextBox.Text = string.Empty;

@@ -271,6 +271,7 @@
       <DependentUpon>SettingsTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\DatabaseConnection.cs" />
+    <Compile Include="Utilities\EquityHandler.cs" />
     <Compile Include="Utilities\StockHandler.cs" />
     <Compile Include="Utilities\PasswordHandler.cs" />
     <Compile Include="Utilities\SettingsHandler.cs" />
