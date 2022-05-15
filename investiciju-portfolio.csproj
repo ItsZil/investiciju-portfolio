@@ -316,6 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
+    <None Include="Resources\LeftArrow30px.png" />
     <None Include="Resources\close15px.png" />
     <EmbeddedResource Include="Resources\Logo.ico" />
   </ItemGroup>
