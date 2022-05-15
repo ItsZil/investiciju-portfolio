@@ -133,7 +133,10 @@ namespace investiciju_portfolio
                     {
                         StockListView.Items.Remove(StockListView.SelectedItems[0]);
                         RecalculateStockCount();
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
+                        int currency = Properties.Settings.Default.base_currency;
+                        double value = Math.Round(EquityHandler.CountValue(), 3);
+                        RecalculateEquity(currency, value, OverviewTab_EquityValueLabel);
+                        
 
                         MessageBox.Show("Instrument deleted successfully.");
                     }
@@ -177,7 +180,10 @@ namespace investiciju_portfolio
                             OverviewTab_CountTextBox.Text = string.Empty;
                             OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
-                            OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
+                            int currency = Properties.Settings.Default.base_currency;
+                            double value = Math.Round(EquityHandler.CountValue(), 3);
+                            RecalculateEquity(currency, value, OverviewTab_EquityValueLabel);
+                            
                             MessageBox.Show(Ticker + " stock successfully added.");
                             RecalculateStockCount();
                         }
@@ -200,7 +206,10 @@ namespace investiciju_portfolio
                         OverviewTab_AvgPriceTextBox.Text = string.Empty;
 
                         MessageBox.Show(Ticker + " stock successfully edited.");
-                        OverviewTab_EquityValueLabel.Text = Math.Round(EquityHandler.CountValue(), 3).ToString();
+
+                        int currency = Properties.Settings.Default.base_currency;
+                        double value = Math.Round(EquityHandler.CountValue(), 3);
+                        RecalculateEquity(currency, value, OverviewTab_EquityValueLabel);
                     }
                     else
                     {
